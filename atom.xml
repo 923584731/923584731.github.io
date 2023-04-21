@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>石银的小酒屋</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-04-20T06:55:04.000Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Alix</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据库并发锁机制</title>
+    <link href="http://example.com/2023/04/20/%E9%94%81%E6%9C%BA%E5%88%B6/"/>
+    <id>http://example.com/2023/04/20/%E9%94%81%E6%9C%BA%E5%88%B6/</id>
+    <published>2023-04-20T06:55:04.000Z</published>
+    <updated>2023-04-20T06:55:04.000Z</updated>
+    
+    
+    <summary type="html">随便聊聊吧</summary>
+    
+    
+    
+    <category term="并发" scheme="http://example.com/categories/%E5%B9%B6%E5%8F%91/"/>
+    
+    
+    <category term="技术记录" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
+    
+    <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netty入门-第三话</title>
+    <link href="http://example.com/2022/04/21/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E8%AF%9D/"/>
+    <id>http://example.com/2022/04/21/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E8%AF%9D/</id>
+    <published>2022-04-21T09:38:58.000Z</published>
+    <updated>2023-04-20T10:49:30.079Z</updated>
+    
+    
+    <summary type="html">对前面两话一些迷惑的点进行细说，讲解handler调用机制，TCP粘包，以及用netty写一个十分简单的RPC。</summary>
+    
+    
+    
+    <category term="Netty" scheme="http://example.com/categories/Netty/"/>
+    
+    <category term="入门" scheme="http://example.com/categories/Netty/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Netty" scheme="http://example.com/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netty入门-第二话</title>
+    <link href="http://example.com/2022/04/15/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%BA%8C%E8%AF%9D/"/>
+    <id>http://example.com/2022/04/15/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%BA%8C%E8%AF%9D/</id>
+    <published>2022-04-15T06:21:58.000Z</published>
+    <updated>2023-04-20T10:49:24.331Z</updated>
+    
+    
+    <summary type="html">对Netty的架构进行了解析，主要是Reactor设计模式的多种解决方案。同时讲解了Netty的核心模块组件。</summary>
+    
+    
+    
+    <category term="Netty" scheme="http://example.com/categories/Netty/"/>
+    
+    <category term="入门" scheme="http://example.com/categories/Netty/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Netty" scheme="http://example.com/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netty入门-第一话</title>
+    <link href="http://example.com/2022/04/08/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%80%E8%AF%9D/"/>
+    <id>http://example.com/2022/04/08/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%80%E8%AF%9D/</id>
+    <published>2022-04-08T06:21:58.000Z</published>
+    <updated>2023-04-20T12:24:17.644Z</updated>
+    
+    
+    <summary type="html">第一话对BIO和NIO进行了讲解，为后续做准备。</summary>
+    
+    
+    
+    <category term="Netty" scheme="http://example.com/categories/Netty/"/>
+    
+    <category term="入门" scheme="http://example.com/categories/Netty/%E5%85%A5%E9%97%A8/"/>
+    
+    
+    <category term="Netty" scheme="http://example.com/tags/Netty/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第12章-垃圾回收器</title>
+    <link href="http://example.com/2021/11/19/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC12%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/"/>
+    <id>http://example.com/2021/11/19/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC12%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E5%99%A8/</id>
+    <published>2021-11-19T10:33:24.000Z</published>
+    <updated>2023-04-20T10:49:12.167Z</updated>
+    
+    
+    <summary type="html">JVM系列-第12章-垃圾回收器。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第11章-垃圾回收相关概念</title>
+    <link href="http://example.com/2021/11/17/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC11%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/"/>
+    <id>http://example.com/2021/11/17/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC11%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5/</id>
+    <published>2021-11-17T04:33:24.000Z</published>
+    <updated>2023-04-20T10:49:09.168Z</updated>
+    
+    
+    <summary type="html">JVM系列-第11章-垃圾回收相关概念。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第10章-垃圾回收概述和相关算法</title>
+    <link href="http://example.com/2021/11/16/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC10%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%A6%82%E8%BF%B0%E5%92%8C%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/"/>
+    <id>http://example.com/2021/11/16/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC10%E7%AB%A0-%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%A6%82%E8%BF%B0%E5%92%8C%E7%9B%B8%E5%85%B3%E7%AE%97%E6%B3%95/</id>
+    <published>2021-11-16T10:14:02.000Z</published>
+    <updated>2023-04-20T10:49:05.952Z</updated>
+    
+    
+    <summary type="html">JVM系列-第10章-垃圾回收概述和相关算法。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第9章-StringTable(字符串常量池)</title>
+    <link href="http://example.com/2021/11/16/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC9%E7%AB%A0-StringTable(%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0)/"/>
+    <id>http://example.com/2021/11/16/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC9%E7%AB%A0-StringTable(%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E6%B1%A0)/</id>
+    <published>2021-11-16T04:38:02.000Z</published>
+    <updated>2023-04-20T10:49:02.843Z</updated>
+    
+    
+    <summary type="html">JVM系列-第9章-StringTable(字符串常量池)。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第8章-执行引擎</title>
+    <link href="http://example.com/2021/11/15/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC8%E7%AB%A0-%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/"/>
+    <id>http://example.com/2021/11/15/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC8%E7%AB%A0-%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/</id>
+    <published>2021-11-15T11:48:42.000Z</published>
+    <updated>2023-04-20T10:48:59.861Z</updated>
+    
+    
+    <summary type="html">JVM系列-第8章-执行引擎。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第7章-对象的实例化内存布局与访问定位</title>
+    <link href="http://example.com/2021/11/14/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC7%E7%AB%A0-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E4%B8%8E%E8%AE%BF%E9%97%AE%E5%AE%9A%E4%BD%8D/"/>
+    <id>http://example.com/2021/11/14/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC7%E7%AB%A0-%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%AE%9E%E4%BE%8B%E5%8C%96%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E4%B8%8E%E8%AE%BF%E9%97%AE%E5%AE%9A%E4%BD%8D/</id>
+    <published>2021-11-14T11:38:42.000Z</published>
+    <updated>2023-04-20T10:48:56.884Z</updated>
+    
+    
+    <summary type="html">JVM系列-第7章-对象的实例化内存布局与访问定位。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第6章-方法区</title>
+    <link href="http://example.com/2021/11/13/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC6%E7%AB%A0-%E6%96%B9%E6%B3%95%E5%8C%BA/"/>
+    <id>http://example.com/2021/11/13/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC6%E7%AB%A0-%E6%96%B9%E6%B3%95%E5%8C%BA/</id>
+    <published>2021-11-13T11:38:42.000Z</published>
+    <updated>2023-04-20T10:48:54.133Z</updated>
+    
+    
+    <summary type="html">JVM系列-第6章-方法区。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第5章-堆</title>
+    <link href="http://example.com/2021/11/11/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC5%E7%AB%A0-%E5%A0%86/"/>
+    <id>http://example.com/2021/11/11/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC5%E7%AB%A0-%E5%A0%86/</id>
+    <published>2021-11-11T12:38:42.000Z</published>
+    <updated>2023-04-20T10:48:51.815Z</updated>
+    
+    
+    <summary type="html">JVM系列-第5章-堆。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第4章-虚拟机栈</title>
+    <link href="http://example.com/2021/11/10/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC4%E7%AB%A0-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88/"/>
+    <id>http://example.com/2021/11/10/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC4%E7%AB%A0-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88/</id>
+    <published>2021-11-10T02:38:42.000Z</published>
+    <updated>2023-04-20T10:48:48.188Z</updated>
+    
+    
+    <summary type="html">JVM系列-第4章-虚拟机栈。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第3章-运行时数据区</title>
+    <link href="http://example.com/2021/11/09/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC3%E7%AB%A0-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/"/>
+    <id>http://example.com/2021/11/09/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC3%E7%AB%A0-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</id>
+    <published>2021-11-09T07:38:42.000Z</published>
+    <updated>2023-04-20T10:48:43.592Z</updated>
+    
+    
+    <summary type="html">JVM系列-第3章-运行时数据区。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第2章-类加载子系统</title>
+    <link href="http://example.com/2021/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC2%E7%AB%A0-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%AD%90%E7%B3%BB%E7%BB%9F/"/>
+    <id>http://example.com/2021/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC2%E7%AB%A0-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%AD%90%E7%B3%BB%E7%BB%9F/</id>
+    <published>2021-11-02T13:31:58.000Z</published>
+    <updated>2023-04-20T10:48:40.086Z</updated>
+    
+    
+    <summary type="html">JVM系列-第2章-类加载子系统。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JVM系列-第1章-JVM与Java体系结构</title>
+    <link href="http://example.com/2021/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC1%E7%AB%A0-JVM%E4%B8%8EJava%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
+    <id>http://example.com/2021/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC1%E7%AB%A0-JVM%E4%B8%8EJava%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
+    <published>2021-11-02T03:51:56.000Z</published>
+    <updated>2023-04-20T10:48:36.905Z</updated>
+    
+    
+    <summary type="html">JVM系列-第1章-JVM与Java体系结构。</summary>
+    
+    
+    
+    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
+    
+    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
+    
+    
+    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
+    
+    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发体系-第四阶段-AQS源码解读-[1]</title>
+    <link href="http://example.com/2020/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/"/>
+    <id>http://example.com/2020/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/</id>
+    <published>2020-10-26T09:59:42.000Z</published>
+    <updated>2023-03-12T04:20:13.274Z</updated>
+    
+    
+    <summary type="html">万字系列长文讲解-Java并发体系-第四阶段-AQS源码解读-[1]。</summary>
+    
+    
+    
+    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="AQS源码" scheme="http://example.com/tags/AQS%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发体系-第三阶段-JUC并发包-[2]</title>
+    <link href="http://example.com/2020/10/10/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[2]/"/>
+    <id>http://example.com/2020/10/10/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[2]/</id>
+    <published>2020-10-10T14:13:58.000Z</published>
+    <updated>2023-03-12T04:20:13.272Z</updated>
+    
+    
+    <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
+    
+    
+    
+    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发体系-第三阶段-JUC并发包-[1]</title>
+    <link href="http://example.com/2020/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/"/>
+    <id>http://example.com/2020/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/</id>
+    <published>2020-10-09T14:13:58.000Z</published>
+    <updated>2023-03-12T04:20:13.271Z</updated>
+    
+    
+    <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
+    
+    
+    
+    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发体系-第二阶段-锁与同步-[3]</title>
+    <link href="http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/"/>
+    <id>http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/</id>
+    <published>2020-10-08T14:10:58.000Z</published>
+    <updated>2023-03-12T04:20:13.274Z</updated>
+    
+    
+    <summary type="html">万字系列长文讲解-Java并发体系-第二阶段,从C++和硬件方面讲解。</summary>
+    
+    
+    
+    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+</feed>
