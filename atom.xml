@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-23T05:19:26.763Z</updated>
+  <updated>2023-04-20T06:55:04.000Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>未来工厂</title>
-    <link href="http://example.com/2023/04/23/AI/%E6%9C%AA%E6%9D%A5%E5%B7%A5%E5%8E%82(AI)/"/>
-    <id>http://example.com/2023/04/23/AI/%E6%9C%AA%E6%9D%A5%E5%B7%A5%E5%8E%82(AI)/</id>
-    <published>2023-04-23T06:55:04.000Z</published>
-    <updated>2023-04-23T05:19:26.763Z</updated>
-    
-    
-    <summary type="html">与时俱进的学习</summary>
-    
-    
-    
-    <category term="AI" scheme="http://example.com/categories/AI/"/>
-    
-    <category term="ChatGPT" scheme="http://example.com/categories/AI/ChatGPT/"/>
-    
-    
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
-    
-  </entry>
   
   <entry>
     <title>数据库并发锁机制</title>
@@ -454,6 +433,31 @@
     
     
     <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
+    
+    
+    
+    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
+    
+    
+    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
+    
+    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Java并发体系-第二阶段-锁与同步-[3]</title>
+    <link href="http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/"/>
+    <id>http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/</id>
+    <published>2020-10-08T14:10:58.000Z</published>
+    <updated>2023-03-12T04:20:13.274Z</updated>
+    
+    
+    <summary type="html">万字系列长文讲解-Java并发体系-第二阶段,从C++和硬件方面讲解。</summary>
     
     
     
