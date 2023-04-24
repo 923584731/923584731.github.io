@@ -38,6 +38,31 @@
   </entry>
   
   <entry>
+    <title>Butterfly 安裝文檔(二) 主題頁面</title>
+    <link href="http://example.com/2022/05/28/Butterfly-%E5%AE%89%E8%A3%9D%E6%96%87%E6%AA%94-%E4%BA%8C-%E4%B8%BB%E9%A1%8C%E9%A0%81%E9%9D%A2/"/>
+    <id>http://example.com/2022/05/28/Butterfly-%E5%AE%89%E8%A3%9D%E6%96%87%E6%AA%94-%E4%BA%8C-%E4%B8%BB%E9%A1%8C%E9%A0%81%E9%9D%A2/</id>
+    <published>2022-05-28T14:34:41.000Z</published>
+    <updated>2023-04-24T06:05:24.604Z</updated>
+    
+    
+    <summary type="html">Butterfly安裝文檔-主題頁面</summary>
+    
+    
+    
+    <category term="Docs文檔" scheme="http://example.com/categories/Docs%E6%96%87%E6%AA%94/"/>
+    
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Hexo" scheme="http://example.com/tags/Hexo/"/>
+    
+    <category term="主題" scheme="http://example.com/tags/%E4%B8%BB%E9%A1%8C/"/>
+    
+    <category term="butterfly" scheme="http://example.com/tags/butterfly/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Netty入门-第三话</title>
     <link href="http://example.com/2022/04/21/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E8%AF%9D/"/>
     <id>http://example.com/2022/04/21/netty/Netty%E5%85%A5%E9%97%A8-%E7%AC%AC%E4%B8%89%E8%AF%9D/</id>
@@ -377,6 +402,31 @@
   </entry>
   
   <entry>
+    <title>Butterfly 美化/優化/魔改 教程合集</title>
+    <link href="http://example.com/2021/01/02/butterfly-collection/"/>
+    <id>http://example.com/2021/01/02/butterfly-collection/</id>
+    <published>2021-01-02T10:11:22.000Z</published>
+    <updated>2023-04-24T02:58:16.690Z</updated>
+    
+    
+    <summary type="html">Butterfly 美化/優化/魔改 合集</summary>
+    
+    
+    
+    <category term="合集" scheme="http://example.com/categories/%E5%90%88%E9%9B%86/"/>
+    
+    
+    <category term="Butterfly" scheme="http://example.com/tags/Butterfly/"/>
+    
+    <category term="美化" scheme="http://example.com/tags/%E7%BE%8E%E5%8C%96/"/>
+    
+    <category term="優化" scheme="http://example.com/tags/%E5%84%AA%E5%8C%96/"/>
+    
+    <category term="魔改" scheme="http://example.com/tags/%E9%AD%94%E6%94%B9/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Java并发体系-第四阶段-AQS源码解读-[1]</title>
     <link href="http://example.com/2020/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/"/>
     <id>http://example.com/2020/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/</id>
@@ -408,56 +458,6 @@
     
     
     <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
-    
-    
-    
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发体系-第三阶段-JUC并发包-[1]</title>
-    <link href="http://example.com/2020/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/"/>
-    <id>http://example.com/2020/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/</id>
-    <published>2020-10-09T14:13:58.000Z</published>
-    <updated>2023-03-12T04:20:13.271Z</updated>
-    
-    
-    <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
-    
-    
-    
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发体系-第二阶段-锁与同步-[3]</title>
-    <link href="http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/"/>
-    <id>http://example.com/2020/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/</id>
-    <published>2020-10-08T14:10:58.000Z</published>
-    <updated>2023-03-12T04:20:13.274Z</updated>
-    
-    
-    <summary type="html">万字系列长文讲解-Java并发体系-第二阶段,从C++和硬件方面讲解。</summary>
     
     
     
