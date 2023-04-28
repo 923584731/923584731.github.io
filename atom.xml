@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-28T02:22:19.462Z</updated>
+  <updated>2023-04-28T03:08:27.762Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Midjourney 新手快速起步指南</title>
+    <link href="http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"/>
+    <id>http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</id>
+    <published>2023-04-28T02:59:05.546Z</published>
+    <updated>2023-04-28T03:08:27.762Z</updated>
+    
+    
+    <summary type="html">Midjourney</summary>
+    
+    
+    
+    <category term="Midjourney" scheme="http://example.com/categories/Midjourney/"/>
+    
+    
+    <category term="Midjourney" scheme="http://example.com/tags/Midjourney/"/>
+    
+    <category term="AI" scheme="http://example.com/tags/AI/"/>
+    
+  </entry>
   
   <entry>
     <title>OpenAI回答问题</title>
@@ -441,29 +462,6 @@
     
     
     <summary type="html">JVM系列-第6章-方法区。</summary>
-    
-    
-    
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
-    
-    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
-    
-    
-    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
-    
-    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列-第5章-堆</title>
-    <link href="http://example.com/2021/11/11/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC5%E7%AB%A0-%E5%A0%86/"/>
-    <id>http://example.com/2021/11/11/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC5%E7%AB%A0-%E5%A0%86/</id>
-    <published>2021-11-11T12:38:42.000Z</published>
-    <updated>2023-04-20T10:48:51.815Z</updated>
-    
-    
-    <summary type="html">JVM系列-第5章-堆。</summary>
     
     
     
