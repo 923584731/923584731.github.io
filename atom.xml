@@ -31,9 +31,9 @@
     <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
     
     
-    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
-    
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
     
   </entry>
   
@@ -73,9 +73,9 @@
     <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
     
     
-    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
-    
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
     
   </entry>
   
