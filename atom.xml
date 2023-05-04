@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-04-28T03:08:27.762Z</updated>
+  <updated>2023-05-04T07:14:18.103Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用Vercel托管平台搭建免费Chatgpt网站</title>
+    <link href="http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/"/>
+    <id>http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/</id>
+    <published>2023-05-04T07:06:57.041Z</published>
+    <updated>2023-05-04T07:14:18.103Z</updated>
+    
+    
+    <summary type="html">这是一篇chatGPT搭建教学</summary>
+    
+    
+    
+    <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
+    
+    
+    <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
+    
+  </entry>
   
   <entry>
     <title>Midjourney 新手快速起步指南</title>
@@ -52,9 +73,9 @@
     <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
     
     
-    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
-    
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
     
   </entry>
   
@@ -434,31 +455,6 @@
     <id>http://example.com/2022/10/08/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[3]/</id>
     <published>2022-10-08T14:10:58.000Z</published>
     <updated>2023-04-25T00:15:07.774Z</updated>
-    
-    
-    <summary type="html">万字系列长文讲解-Java并发体系-第二阶段,从C++和硬件方面讲解。</summary>
-    
-    
-    
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发体系-第二阶段-锁与同步-[2]</title>
-    <link href="http://example.com/2022/10/07/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[2]/"/>
-    <id>http://example.com/2022/10/07/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%BA%8C%E9%98%B6%E6%AE%B5-%E9%94%81%E4%B8%8E%E5%90%8C%E6%AD%A5-[2]/</id>
-    <published>2022-10-07T14:10:58.000Z</published>
-    <updated>2023-04-25T01:03:09.661Z</updated>
     
     
     <summary type="html">万字系列长文讲解-Java并发体系-第二阶段,从C++和硬件方面讲解。</summary>
