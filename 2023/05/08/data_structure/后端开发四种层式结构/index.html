@@ -1,0 +1,669 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>后端开发四种层式结构 | 石银的小酒屋</title><meta name="keywords" content="数据结构"><meta name="author" content="Alix"><meta name="copyright" content="Alix"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="后端开发四种层式结构">
+<meta property="og:url" content="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="石银的小酒屋">
+<meta property="og:description" content="数据结构">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://alixjc.gitee.io/my-pages/blogImage/dataStructure.png">
+<meta property="article:published_time" content="2023-05-08T08:24:08.369Z">
+<meta property="article:modified_time" content="2023-05-08T08:50:26.187Z">
+<meta property="article:author" content="Alix">
+<meta property="article:tag" content="数据结构">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://alixjc.gitee.io/my-pages/blogImage/dataStructure.png"><link rel="shortcut icon" href="https://alixjc.gitee.io/my-pages/animation/touxiang.png"><link rel="canonical" href="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '后端开发四种层式结构',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-08 16:50:26'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/self/Kimbiedark.css"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="石银的小酒屋" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://alixjc.gitee.io/my-pages/animation/touxiang.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/playlist/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li><li><a class="site-page child" href="/chatGPT/"><i class="fa-fw fa fa-link"></i><span> GPT</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://alixjc.gitee.io/my-pages/blogImage/dataStructure.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">石银的小酒屋</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/playlist/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li><li><a class="site-page child" href="/chatGPT/"><i class="fa-fw fa fa-link"></i><span> GPT</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">后端开发四种层式结构</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-08T08:24:08.369Z" title="发表于 2023-05-08 16:24:08">2023-05-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-08T08:50:26.187Z" title="更新于 2023-05-08 16:50:26">2023-05-08</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">19.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>64分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="后端开发四种层式结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><ol>
+<li>B树  &#x2F; B+树：关系型数据库核心存储结构（mysql、mogodb）</li>
+<li>时间轮：海量定时任务检测（linux、skynet、kafka）</li>
+<li>跳表：高并发有序存储（lucune、redis、rocksdb）</li>
+<li>LSM-Tree：更高性能以及更高空间利用率的数据存储结构（rocksdb）</li>
+</ol>
+<h1 id="一、B树和B-树"><a href="#一、B树和B-树" class="headerlink" title="一、B树和B+树"></a>一、B树和B+树</h1><p>MySQL数据库的索引的数据结构主要是Hash表或B+树.</p>
+<p>先引入问题, 数据库索引为什么使用树结构存储?<br>因为树的查询效率高, 而且可以保持有序. <code>二叉树的时间复杂度是O(logN)</code>, 查找和比较次数都是最小的, 但是并没有使用二叉树作为索引的数据结构.</p>
+<p>没有使用二叉树的原因是因为磁盘IO, 数据库引擎是存储在磁盘上的, 当数据量比较大的时候, 索引的大小可能有几个G甚至更多. 当我们利用索引查询的时候, 不可能将整个索引全部加载到内存中去, 只能逐一加载每一个磁盘页, 这里的<code>磁盘页</code>对应的<code>索引树</code>的节点.<br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-1.png"></p>
+<h2 id="B树"><a href="#B树" class="headerlink" title="B树"></a>B树</h2><p>在计算机科学中，B树是一种<code>自平衡的树</code>，<code>能够保持数据有序</code>。这种数据结构能够让<code>查找数据</code>、<code>顺序访问、插入数据及删除</code>的动作，都在对数量级的时间复杂度内完成。B树，其实是<code>一颗特殊的二叉查找树</code>（binary search tree），可以拥有多于2个子节点。与自平衡二叉查找树不同，B树为系统大块数据的读写操作做了优化。B树减少定位记录时所经历的中间过程，从而加快存取速度，其实B树主要<code>解决的就是数据IO的问题</code>。B树这种数据结构可以用来描述外部存储。这种<code>数据结构常被应用在数据库和文件系统</code>的实现上。</p>
+<h3 id="B树特性"><a href="#B树特性" class="headerlink" title="B树特性"></a>B树特性</h3><p>这里的B树，也就是英文中的B-Tree，一个 m 阶的B树满足以下条件：</p>
+<ol>
+<li><p>&#96;每个结点至多拥有m棵子树；</p>
+</li>
+<li><p>&#96;根结点至少拥有两颗子树（存在子树的情况下），根结点至少有一个关键字；</p>
+</li>
+<li><p>&#96;除了根结点以外，其余每个分支结点至少拥有 m&#x2F;2 棵子树；</p>
+</li>
+<li><p>&#96;所有的叶结点都在同一层上，B树的叶子结点可以看成是一种外部节点，不包含任何信息；</p>
+</li>
+<li><p>&#96;有 k 棵子树的分支结点则存在 k-1 个关键码，关键码按照递增次序进行排列；</p>
+</li>
+<li><p>&#96;关键字数量需要满足ceil(m&#x2F;2)-1 &lt;&#x3D; n &lt;&#x3D; m-1；</p>
+</li>
+</ol>
+<p><strong>典型的B树(4阶)如下图所示：</strong><br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-4.png"></p>
+<h3 id="为什么要B树"><a href="#为什么要B树" class="headerlink" title="为什么要B树"></a>为什么要B树</h3><p>磁盘中有两个机械运动的部分，分别是盘片旋转和磁臂移动。盘片旋转就是我们市面上所提到的多少转每分钟，而磁盘移动则是在盘片旋转到指定位置以后，移动磁臂后开始进行数据的读写。那么这就存在一个定位到磁盘中的块的过程，而定位是磁盘的存取中花费时间比较大的一块，毕竟机械运动花费的时候要远远大于电子运动的时间。当大规模数据存储到磁盘中的时候，显然定位是一个非常花费时间的过程，但是我们可以通过B树进行优化，提高磁盘读取时定位的效率。</p>
+<p>为什么B类树可以进行优化呢？我们可以根据B类树的特点，构造一个多阶的B类树，然后在尽量多的在结点上存储相关的信息，保证层数尽量的少，在B树中可以检查多个子结点，由于在一棵树中检查任意一个结点都需要一次磁盘访问，所以B树避免了大量的磁盘访问；而且B类树是平衡树，每个结点到叶子结点的高度都是相同，这也保证了每个查询是稳定的，查询的时间复杂度是O(log2N)。</p>
+<blockquote>
+<p><strong>总的来说就是利用平衡树的优势，保证了查询的稳定性和加快了查询的速度。</strong></p>
+</blockquote>
+<h3 id="B树的操作"><a href="#B树的操作" class="headerlink" title="B树的操作"></a>B树的操作</h3><p>既然是树，那么必不可少的操作就是插入和删除，这也是B树和其它数据结构不同的地方，当然了，还有必不可少的搜索，分享一个对B树的操作进行可视化的<a target="_blank" rel="noopener" href="https://www.cs.usfca.edu/~galles/visualization/BTree.html">网址</a>，它是由usfca提供的。</p>
+<p>假定对高度为h的m阶B树进行操作。</p>
+<h4 id="插入"><a href="#插入" class="headerlink" title="插入"></a>插入</h4><p>通过搜索找到对应的结点进行插入，那么根据即将插入的结点的数量又分为下面几种情况。</p>
+<ul>
+<li><p>如果该结点的关键字个数没有到达到m-1个，那么直接插入即可；</p>
+</li>
+<li><p>如果该结点的关键字个数已经到达了m-1个，那么根据B树的性质显然无法满足，需要将其进行分裂。分裂的规则是该结点分成两半，将中间的关键字进行提升，加入到父亲结点中，但是这又可能存在父亲结点也满员的情况，则不得不向上进行回溯，甚至是要对根结点进行分裂，那么整棵树都加了一层。</p>
+</li>
+</ul>
+<p><strong>例子如下</strong><br> 将元素7插入下图中的B树</p>
+<p><font style="background:#7FFFD4">步骤一：自顶向下查找元素7应该在的位置，即在6和8之间</font></p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/B树-2.png">
+
+<p><font style="background:#7FFFD4">步骤二：三阶B树中的节点最多有两个元素，把6 7 8里面的中间元素上移（中间元素上移是插入操作的关键）</font></p>
+<p><font style="background:#7FFFD4">步骤三：上移之后，上一层节点元素也超载了，5 7 9中间元素上移，现在根节点变为了 7 15</font></p>
+<p><font style="background:#7FFFD4">步骤四：要对B树进行调整，使其满足B树的特性，最终如下图</font></p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/B树-3.png">
+
+<p><strong>下面是往B树中依次插入</strong><br>6 10 4 14 5 11 15 3 2 12 1 7 8 8 6 3 6 21 5 15 15 6 32 23 45 65 7 8 6 5 4<br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-9.gif"></p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>B树的删除相对于插入来说较为复杂。</p>
+<p><strong>删除分为两种情况：</strong></p>
+<ol>
+<li><code>删除的是非终端结点</code></li>
+<li><code>删除的是终端结点</code></li>
+</ol>
+<p>当我们删除的是非终端结点时，将用该结点的直接前驱或直接后继代替其位置，因此对于非终端结点的删除最后还是转化到了对终端结点的删除。（关键字左子树的最右下结点为直接前驱，右子树的最左下结点为直接后继）<br>因此我们主要还是讨论对终端结点的删除。</p>
+<p>对于终端结点的删除我们又分为了几种情况：  </p>
+<ol>
+<li><p><font style="background: #7FFFD4 ">删除后结点的关键字个数未低于下限</font><br>直接删除即可</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/B树-5.png">
+</li>
+<li><p><font style="background: #7FFFD4 ">删除后结点的关键字个数低于下限</font><br><strong>该种情况下还需要分为以下三种情况</strong><br> (1). <strong>右兄弟有足够的关键字</strong></p>
+</li>
+</ol>
+<p>有足够关键字的意思就是借给自己一个关键字后还能够保证B树的性质，即关键字个数大于[m&#x2F;2⌉-1]个。<br>此时右兄弟的最左关键字上浮到父亲结点，而原来的父亲元素则下沉到被删除关键字的结点中。如下图所示<br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-6.png"></p>
+<p>   (2). <strong>右兄弟没有足够的关键字，左兄弟有足够的关键字</strong><br>此时左兄弟的最右关键字上浮到父亲结点，而原来的父亲元素则下沉到被删除关键字的结点中。如下图所示<br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-7.png"></p>
+<p>   (3) <strong>左右兄弟都没有足够关键字</strong><br>此时由于左右兄弟的结点都只有[m&#x2F;2]-1个，因此，当关键字删除后，该结点与任意兄弟结点的关键字个数的总和必然不大于一个结点所能容纳的上限。<br>举个例子，对于一个5阶B树来说，每个结点最多有4个关键字，最少要有2个关键字，当该B树删除结点时符合本条情况时，左右兄弟必然都只有2个关键字，而被删除关键字的结点由于删除后自身结点不足，则只剩下1个关键字，因此该结点删除后与任一兄弟的合并都只有3个关键字，完全符合B树性质。<br>合并过程中，合并的两个结点的父关键字则会下沉，与这个两个合并结点一起合并。具体如下图所示<br><img src="https://alixjc.gitee.io/my-pages/blogImage/B树-8.png"></p>
+<p>在合并过程中，双亲结点中的关键字会减1.若其双亲结点是根节点，且个数少至0，则直接删除根结点，合并后的新结点成为根。<br>若双亲结点不是根结点，且关键字数量少于[m&#x2F;2]-1个，则又要重复之前的步骤进行调整，直至符合B树所有条件。</p>
+<h2 id="B-树"><a href="#B-树" class="headerlink" title="B+树"></a>B+树</h2><p>我们的B树可以拥有非常高效率的查找速度，那么为什么我们还会需要B+树这个数据结构呢？</p>
+<p>事实上，B树的查找效率虽然非常优秀，但是它也有一个自身的<code>缺陷</code>。我们都知道，数据库中的数据都是按照记录存放的，每条记录都是由多个数据项组成。因此我们的每条数据记录通常也不会太短，甚至可能非常之长。同样，如果将这些数据记录按照我们的B树进行组织，那么每个结点将存储的内容就是记录本身，<code>B树是将记录本身作为单位存放的</code>。比如我们用一个5阶B树组织在校学生的数据记录，那么我们每个结点都至少存储2条学生记录。这样乍一看好像没什么问题，但是在检索过程中，由于每个结点所占据的存储很大，我们实际的检索速度很难像前面展示的那些B树一样实现快速的检索(前面的树中每个结点的数据记录都是关键字本身，非常小)。</p>
+<p>因此我们引入了<code>B+树</code>，B+树的特殊之处在于它将我们的记录的内容放在了叶子结点上，其他分支节点和终端结点只存放关键字。同时<code>所有的结点的关键字都会再次出现在该关键字对应的子结点上即所有的关键字都会出现在终端结点上，这样保证了每个叶子结点上的数据记录都能够有一个关键字于其对应</code>。在这样的调整下我们每个结点只需要存放记录对应关键字，由此相较于B树，在同样大小的结点约束下，我们的B+树的每个结点可以存放更多的关键字，从而大幅降低我们的树高，提升检索速度。</p>
+<p><font style = "background:#d4e5ef">且在B树的基础上将从m个关键字对应m+1个分支变成了m个关键字对应m个分支，即B+树的结点最大关键字数与B+数的阶相同.</font></p>
+<h3 id="B-树的基本性质"><a href="#B-树的基本性质" class="headerlink" title="B+树的基本性质"></a>B+树的基本性质</h3><p>一棵m阶的B+树需要满足下列条件：</p>
+<ol>
+<li>每个分支结点最多有m棵树和m个关键字</li>
+<li>根结点至少两棵子树，其他每个分支结点至少有[m&#x2F;2]棵子树</li>
+<li>结点的子树个数与关键字个数相等</li>
+<li>每个关键字都应该出现在其对应子结点中，且每个结点都按照从小到大的顺序排列</li>
+<li>所有终端结点包含全部关键字及指向相应记录的指针。同时终端结点将关键字从<code>小到大顺序</code>排列，并且相终端结点按大小顺序相互链接起来。</li>
+<li>同样是是绝对平衡的<br><strong>其树形(4阶B+树)如下图所示</strong></li>
+</ol>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/B+树-1.png">
+
+
+<p><img src="https://wx3.sinaimg.cn/large/007FyU7Tgy1g1931ail52j30gm09rn2i.jpg"><br>B+树的优势<br>B+树的层级更少：相较于B树B+每个非叶子节点存储的关键字数更多，树的层级更少所以查询数据更快；<br>B+树查询速度更稳定：B+所有关键字数据地址都存在叶子节点上，所以每次查找的次数都相同所以查询速度要比B树更稳定;<br>B+树天然具备排序功能：B+树所有的叶子节点数据构成了一个有序链表，在查询大小区间的数据时候更方便，数据紧密性很高，缓存的命中率也会比B树高。<br>B+树全节点遍历更快：B+树遍历整棵树只需要遍历所有的叶子节点即可，，而不需要像B树一样需要对每一层进行遍历，这有利于数据库做全表扫描。</p>
+<h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><p>其操作和B树的操作是类似的，不过需要注意的是，在增加值的时候，如果存在满员的情况，将选择结点中的值作为新的索引，还有在删除值的时候，索引中的关键字并不会删除，也不会存在父亲结点的关键字下沉的情况，因为那只是索引。</p>
+<h3 id="B树和B-树的区别"><a href="#B树和B-树的区别" class="headerlink" title="B树和B+树的区别"></a>B树和B+树的区别</h3><p>这都是由于B+树和B树具有不同的存储结构所造成的区别，以一个m阶树为例。</p>
+<ol>
+<li><p>关键字的数量不同；B+树中分支结点有m个关键字，其叶子结点也有m个，其关键字只是起到了一个索引的作用，虽然B树也有m个子结点，但是其只拥有m-1个关键字。</p>
+</li>
+<li><p>存储的位置不同；B+树中的数据都存储在叶子结点上，也就是其所有叶子结点的数据组合起来就是完整的数据，但是B树的数据存储在每一个结点中，并不仅仅存储在叶子结点上。</p>
+</li>
+<li><p>分支结点的构造不同；B+树的分支结点存储着关键字信息和儿子的指针（这里的指针指的是磁盘块的偏移量），也就是说内部结点仅仅包含着索引信息。</p>
+</li>
+<li><p>查询不同；B树在找到具体的数值以后就结束，而B+树则需要通过索引找到叶子结点中的数据才结束，也就是说B+树的搜索过程中走了一条从根结点到叶子结点的路径，其高度是相同的，相对来说更加的稳定；</p>
+</li>
+<li><p>区间访问：B+树的叶子结点会按照顺序建立起链状指针，可以进行区间访问；</p>
+</li>
+</ol>
+<h3 id="B-树的优势"><a href="#B-树的优势" class="headerlink" title="B+树的优势"></a>B+树的优势</h3><p>B+树的层级更少：相较于B树B+每个非叶子节点存储的关键字数更多，树的层级更少所以查询数据更快；<br>B+树查询速度更稳定：B+所有关键字数据地址都存在叶子节点上，所以每次查找的次数都相同所以查询速度要比B树更稳定;<br>B+树天然具备排序功能：B+树所有的叶子节点数据构成了一个有序链表，在查询大小区间的数据时候更方便，数据紧密性很高，缓存的命中率也会比B树高。<br>B+树全节点遍历更快：B+树遍历整棵树只需要遍历所有的叶子节点即可，，而不需要像B树一样需要对每一层进行遍历，这有利于数据库做全表扫描。<br>打个比方：B+树就有点像我们的目录，是索引的一个形式。若一个目录中，除了每个章节的名称外还需包含每章的大致内容，那么本来一页就可以看完的目录就会变成很多也，这并不方便我们从中去找到我们所需要的内容。</p>
+<h3 id="B树的优势"><a href="#B树的优势" class="headerlink" title="B树的优势"></a>B树的优势</h3><p>B树相对于B+树的优点是，如果<code>经常访问的数据离根节点很近</code>，而B树的非叶子节点本身存有关键字其数据的地址，所以这种数据检索的时候会要比B+树快。</p>
+<p>&#96;但是不可否认，B树依旧是一种优秀的算法</p>
+<h3 id="两者的细节对比"><a href="#两者的细节对比" class="headerlink" title="两者的细节对比"></a>两者的细节对比</h3><table>
+<thead>
+<tr>
+<th>-</th>
+<th>m阶B树</th>
+<th>m阶B+树</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>类比</td>
+<td>二叉查找树的进化→m叉查找树</td>
+<td>分块查找的进化→多级分块查找</td>
+</tr>
+<tr>
+<td>关键字和分叉</td>
+<td>n个关键字对应n+1个分叉</td>
+<td>n个关键字对应n个分叉</td>
+</tr>
+<tr>
+<td>结点包含的信息</td>
+<td>所有结点都包含记录本身</td>
+<td>分支结点只放关键字，只有终端结点会存放指向记录的指针</td>
+</tr>
+<tr>
+<td>查找方式</td>
+<td>不支持顺序查找。且查找速度不稳定，可能停留在任何一层</td>
+<td>支持顺序查找，且查找速度稳定，每次查找都会到达最下层</td>
+</tr>
+<tr>
+<td>平衡</td>
+<td>绝对平衡</td>
+<td>绝对平衡</td>
+</tr>
+<tr>
+<td>结点最少关键字数</td>
+<td>⌈m&#x2F;2⌉-1</td>
+<td>⌈m&#x2F;2⌉</td>
+</tr>
+</tbody></table>
+<h3 id="B树与B-树在实际代码中的应用"><a href="#B树与B-树在实际代码中的应用" class="headerlink" title="B树与B+树在实际代码中的应用"></a>B树与B+树在实际代码中的应用</h3><p>在我们的<code>MySql数据库</code>中我们经常能够看见数据库引擎这个词，而数据库引擎的选择就决定了我们数据库记录的组织和查找方式。我们最常使用的就是我们的<code>MyISAM和InnoDB两个数据库引擎</code>。事实上，这两种数据库引擎<code>所用的都是B+树</code>，<code>但是又有所不同，属于B+树的变体</code>，这个要另外去理解。</p>
+<p>而我们的B树呢则是在<em>MongoDB</em>中被使用到了</p>
+<hr>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33905217/article/details/121827393">https://blog.csdn.net/qq_33905217/article/details/121827393</a></p>
+<h1 id="二、时间轮"><a href="#二、时间轮" class="headerlink" title="二、时间轮"></a>二、时间轮</h1><h2 id="从定时任务说起"><a href="#从定时任务说起" class="headerlink" title="从定时任务说起"></a>从定时任务说起</h2><p>自然界中定时任务无处不在，太阳每天东升西落，候鸟的迁徙，树木的年轮，人们每天按时上班，每个月按时发工资、交房租，四季轮换，潮涨潮落，等等，从某种意义上说，都可以认为是定时任务。<br>大概很少有人想过，这些“定时”是怎样做到的。当然，计算机领域的同学们可能对此比较熟悉，毕竟工作中的定时任务也是无处不在的：每天凌晨更新一波数据库，每天9点发一波邮件，每隔10秒钟抢一次火车票。。。<br>　　至于怎么实现的？很简单啊，操作系统的crontab，spring框架的quartz,实在不行Java自带的<code>ScheduledThreadPool</code>都可以很方便的做到定时任务的管理调度。<br>　　当你熟练的敲下“* * 9 * * ?”等着神奇的事情发生时，你是否想过背后的“玄机”？</p>
+<p><font style = "background:#d4e5ef">时间轮算法的应用非常广泛，在 Dubbo、Netty、Kafka、ZooKeeper、Quartz 的组件中都有时间轮思想的应用，甚至在 Linux 内核中都有用到。</font></p>
+<h2 id="初识时间轮"><a href="#初识时间轮" class="headerlink" title="初识时间轮"></a>初识时间轮</h2><p>业务需要实现一个时间调度的工具，定时生成报表，于是想了一个取巧的办法：<br>　　1. 启动时从DB读取cron表达式解析，算出该任务下次执行的时间。<br>　　2. 下次执行的时间 - 当前时间 &#x3D; 时间差。<br>　　3. 向ScheduleThreadPool线程池中提交一个延迟上面算出来的时间差的执行的任务。<br>　　4. 任务执行时，算一下这个任务下次执行的时间，算时间差，提交到线程池。<br>　　5. 当任务需要取消时，直接调用线程池返回的Future对象的cancel()方法就行了。</p>
+<h3 id="绝对时间和相对时间"><a href="#绝对时间和相对时间" class="headerlink" title="绝对时间和相对时间"></a>绝对时间和相对时间</h3><p>定时任务一般有两种：<br>　　1. 约定一段时间后执行。<br>　　2. 约定某个时间点执行。</p>
+<p>　　聪明的你会很快发现，这两者之间可以相互转换，比如给你个任务，要求12点执行，你看了一眼时间，发现现在是9点钟，那么你可以认为这个任务三个小时候执行。<br>　　同样的，给你个任务让你3个小时后执行，你看了一眼现在是9点钟，那么你当然可以认为这个任务12点钟执行。<br>　　我们先来考虑一个简单的情况，你接到三个任务A、B、C（都转换成绝对时间），分别需要再3点钟，4点钟和9点钟执行，正当百思不得其解时，不经意间你瞅了一眼墙上的钟表，瞬间来了灵感，如醍醐灌顶，茅塞顿开：<br><img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-1.png"></p>
+<p>如上图中所示，<strong>我只需要把任务放到它需要被执行的时刻，然后等着时针转到这个时刻时，取出该时刻放置的任务，执行就可以了</strong>。 这就是时间轮算法最核心的思想了。 什么？时针怎么转？ while-true-sleep 下面让我们一点一点增加复杂度。</p>
+<p>需要重复执行多次的任务 多数定时任务是需要重复执行，比如每天上午9点执行生成报表的任务。对于重复执行的任务，其实我们需要关心的只是下次执行时间，并不关心这个任务需要循环多少次，还是那每天上午9点的这个任务来说。</p>
+<ul>
+<li>比如现在是下午4点钟，我把这个任务加入到时间轮，并设定当时针转到明天上午九点(该任务下次执行的时间)时执行。</li>
+<li>时间来到了第二天上午九点，时间轮也转到了9点钟的位置，发现该位置有一个生成报表的任务，拿出来执行。</li>
+<li>同时时间轮发现这是一个循环执行的任务，于是把该任务重新放回到9点钟的位置。</li>
+<li>重复步骤2和步骤3。</li>
+</ul>
+<p>如果哪一天这个任务不需要再执行了，那么直接通知时间轮，找到这个任务的位置删除掉就可以了。 由上面的过程我们可以看到，时间轮至少需要提供4个功能：</p>
+<ul>
+<li>加入任务</li>
+<li>执行任务</li>
+<li>删除任务</li>
+<li>沿着时间刻度前进<br>上面说的是同一个时刻只有一个任务需要执行的情况，更通用的情况显然是同一时刻可能需要执行多个任务，<code>比如每天上午九点除了生成报表之外，还需要执行发送邮件的任务，需要执行创建文件的任务，还需执行数据分析的任务等等</code>，于是你刚才可能就比较好奇的时间轮的数据结构到现在可能更加好奇了，那我们先来说说时间轮的数据结构吧。</li>
+</ul>
+<h3 id="时间轮的数据结构"><a href="#时间轮的数据结构" class="headerlink" title="时间轮的数据结构"></a>时间轮的数据结构</h3><p>首先，时钟可以用数组或者循环链表表示，这个每个时钟的刻度就是一个槽，槽用来存放该刻度需要执行的任务，如果有多个任务需要执行呢？每个槽里面放一个链表就可以了，就像下面图中这样：<br><img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-2.png"></p>
+<p>同一时刻存在多个任务时，只要把该刻度对应的链表全部遍历一遍，执行（扔到线程池中异步执行）其中的任务即可。</p>
+<h3 id="时间刻度不够用怎么办？"><a href="#时间刻度不够用怎么办？" class="headerlink" title="时间刻度不够用怎么办？"></a>时间刻度不够用怎么办？</h3><p>如果任务不只限定在一天之内呢？比如我有个任务，需要每周一上午九点执行，我还有另一个任务，需要每周三的上午九点执行。一种很容易想到的解决办法是：</p>
+<h4 id="增大时间轮的刻度"><a href="#增大时间轮的刻度" class="headerlink" title="增大时间轮的刻度"></a>增大时间轮的刻度</h4><p>一天24个小时，一周168个小时，为了解决上面的问题，我可以把时间轮的刻度（槽）从12个增加到168个，比如现在是星期二上午10点钟，那么下周一上午九点就是时间轮的第9个刻度，这周三上午九点就是时间轮的第57个刻度，示意图如下：<br><img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-3.png"></p>
+<p>仔细思考一下，会发现这中方式存在几个缺陷：</p>
+<ul>
+<li>时间刻度太多会导致时间轮走到的多数刻度没有任务执行，比如一个月就2个任务，我得移动720次，其中718次是无用功。</li>
+<li><font style = "background:#d8f5a2">时间刻度太多会导致存储空间变大，利用率变低，比如一个月就2个任务，我得需要大小是720的数组，如果我的执行时间的粒度精确到秒，那就更恐怖了。</font><br>于是乎，聪明的你脑袋一转，想到另一个办法：</li>
+</ul>
+<h2 id="round-的时间轮算法"><a href="#round-的时间轮算法" class="headerlink" title="round 的时间轮算法"></a>round 的时间轮算法</h2><p>这次我不增加时间轮的刻度了，刻度还是24个，现在有三个任务需要执行，</p>
+<ul>
+<li>任务一每周二上午九点。</li>
+<li>任务二每周四上午九点。</li>
+<li>任务三每个月12号上午九点。</li>
+</ul>
+<p>比如现在是9月11号星期二上午10点，时间轮转一圈是24小时，<br>任务一下次执行（下周二上午九点）,需要时间轮转过6圈后，到第7圈的第9个刻度开始执行。<br>任务二下次执行第3圈的第9个刻度，任务三是第2圈的第9个刻度。</p>
+<p>为了处理上面提到的问题，我们可以在每个定时任务中增设一个 <code>round</code> 字段，用以标识当前任务还需要在时间轮中遍历几轮，才进入执行的时间判断轮。其执行逻辑为：每次遍历到一个时间格后，其任务队列上的<code>所有任务 round 字段减 1</code>，<code>如果 round 字段变为 0</code>，则将任务移出队列，<code>提交给异步线程池来执行其内容</code>。如果这是一个重复任务，那么提交后再将它重新添加到任务队列中。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-5.png"></p>
+<p>假设现在将时间轮的精度设置为秒，时间轮共有 60 个时间格，那么一个 130 秒后执行的任务，可以将其 round 字段设为 2，并将任务加入到时间刻度为 10 的任务队列中。即对于间隔时间为 x 的定时任务：</p>
+<ul>
+<li>round &#x3D; x &#x2F; 60 （整除）</li>
+<li>刻度位置 pos &#x3D; x % 60</li>
+</ul>
+<blockquote>
+<p>这种方式虽然减少了时间轮的刻度个数，但并没有减少轮询线程的轮询次数，其效率还是相对比较低。时间轮每遍历一个时间刻度，就要完成一次判断和执行的操作，其运行效率与一般的任务队列差别不大，并没有太大的效率提升。完成了一次遍历，但是并没有提交可执行的任务，这种现象可以称之为“空轮询”。</p>
+</blockquote>
+<p><font style = "background:#d8f5a2">这样做能解决时间轮刻度范围过大造成的空间浪费，但是却带来了另一个问题：时间轮每次都需要遍历任务列表，耗时增加，当时间轮刻度粒度很小(秒级甚至毫秒级)，任务列表又特别长时，这种遍历的办法是不可接受的。</font></p>
+<h2 id="分层时间轮算法"><a href="#分层时间轮算法" class="headerlink" title="分层时间轮算法"></a>分层时间轮算法</h2><p>另一种对简单时间轮算法改良的方案，可以参照钟表中时、分、秒的设计，设置三个级别的时间轮，分别代表时、分、秒，且每个轮分别带有 24、60、60 个刻度。这样子三个时间轮结合使用，就能表达一天内所有的时间刻度了。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-6.png"></p>
+<p>当 hour 时间轮的轮询线程轮询到执行的时间格时，其对应的任务队列已达到其执行的 hour 时间。此时这些任务需转移到下一层 minute 时间轮中，根据其执行时间的 minute 位，插入到对应的任务队列中。后续的步骤都类似，直至到最后一层 second 的时间轮中，被轮询到的队列即可提交其所有的任务到异步执行线程池中。</p>
+<p>采用分层时间轮的方式，不需要引入 round 字段，只要在最后一级遍历到的任务队列，必然是可提交执行的，进而避免了空轮询的问题，提高了轮询的效率。每个时间轮的遍历由不同的轮询线程实现，虽然引入的线程并发，但是线程数仅仅跟时间轮的级数有关，并不会随着任务数量的增加的增加。</p>
+<p><strong>分层时间轮是这样一种思想：</strong></p>
+<ul>
+<li>针对时间复杂度的问题：不做遍历计算round，凡是任务列表中的都应该是应该被执行的，直接全部取出来执行。</li>
+<li>针对空间复杂度的问题：分层，每个时间粒度对应一个时间轮，多个时间轮之间进行级联协作。</li>
+</ul>
+<p>第一点很好理解，第二点有必要举个例子来说明：<br>比如我有三个任务：</p>
+<ul>
+<li>任务一每周二上午九点。</li>
+<li>任务二每周四上午九点。</li>
+<li>任务三每个月12号上午九点。</li>
+</ul>
+<p>三个任务涉及到四个时间单位：小时、天、星期、月份。<br>拿任务三来说，任务三得到执行的前提是，时间刻度先得来到12号这一天，然后才需要关注其更细一级的时间单位：上午9点。<br>基于这个思想，我们可以设置三个时间轮：<code>月轮、周轮、天轮。</code></p>
+<ul>
+<li>月轮的时间刻度是天。</li>
+<li>周轮的时间刻度是天。</li>
+<li>天轮的时间刻度是小时。</li>
+</ul>
+<p>初始添加任务时，任务一添加到天轮上，任务二添加到周轮上，任务三添加到月轮上。<br>三个时间轮以各自的时间刻度不停流转。<br>当周轮移动到刻度2(星期二)时，取出这个刻度下的任务，丢到天轮上，天轮接管该任务，到9点执行。<br>同理，当月轮移动到刻度12(12号)时，取出这个刻度下的任务，丢到天轮上，天轮接管该任务，到9点执行。<br>这样就可以做到既不浪费空间，有不浪费时间。</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/时间轮-7.png">
+
+<h2 id="时间轮算法的进一步优化"><a href="#时间轮算法的进一步优化" class="headerlink" title="时间轮算法的进一步优化"></a>时间轮算法的进一步优化</h2><p>通过分层时间轮，我们可以将一系列定时任务根据其执行时间进行分组和排序，依次分配到时间轮的对应时间格中。只要时间轮的指针到达特定时间格，相应任务队列中的所有任务即可提交执行。但是在实际应用中，真正需要执行任务的时间格在所有时间格中的占比是很小的。假如第一个待执行的任务列表的 expiration 为 100s，以每秒推进一格的方案来看，在获取到第一个可执行的任务列表前，会出现 99 次的空轮询，也就是时间轮指针推进了，但并没有任务执行的情况。这种空轮询的存在，并没有太大的业务含义，白白耗费了系统的性能资源。</p>
+<p>为了处理好空轮询的问题，这里可以再引入 DelayQueue 来维护每个定时任务列表，进而减少空轮询的次数，实现精确轮询。具体方案就是，根据 DelayQueue 中前后相邻的任务队列的 expiration 来确定时间轮指针推进的时间，精确地在下一个任务执行的时间点时对该列表进行轮询。</p>
+<h2 id="性能分析"><a href="#性能分析" class="headerlink" title="性能分析"></a>性能分析</h2><p>一个初级的定时任务框架，可以采用有序任务队列 + 轮询线程的方式进行实现，有序任务队列通常基于优先队列（堆）进行实现，因此其任务的插入和删除的时间复杂度为 O(log N) 。而时间轮算法，能够将时间复杂度降低至 O(1)，效率明显得到提升。而算法的主要性能损耗，则体现在多个时间轮轮询线程的时间推进，以及他们与任务执行线程之间的切换。这方面的复杂度，明显小于基本的时间轮算法还有普通的任务队列。</p>
+<p>定义：</p>
+<ul>
+<li>n - 任务数量</li>
+<li>k - 多线程轮询的线程数</li>
+<li>常数 M - 全时段时间轮刻度数量（空间单位数）</li>
+<li>常数 L - 单 round 时间轮刻度数量（空间单位数）</li>
+<li>li​ - 第 i 层时间轮刻度数量（空间单位数）</li>
+<li>T - 存在任务队列的空间单位数</li>
+</ul>
+<h2 id="多级时间轮算法的简单实现"><a href="#多级时间轮算法的简单实现" class="headerlink" title="多级时间轮算法的简单实现"></a>多级时间轮算法的简单实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> timeWheel;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> java.util.Date;  </span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.DelayQueue;  </span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.Delayed;  </span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MultiLevelTimeWheel</span> &#123;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 时间轮大小，每一格代表1秒  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">final</span> <span class="type">int</span> <span class="variable">WHEEL_SIZE</span> <span class="operator">=</span> <span class="number">60</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 时间轮的每一格，用来存储定时任务  </span></span><br><span class="line">    <span class="keyword">private</span> TimeSlot[] timeSlots;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 当前指针指向的时间槽  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> <span class="variable">currentSlotIndex</span> <span class="operator">=</span> <span class="number">0</span>;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 下一级时间轮  </span></span><br><span class="line">    <span class="keyword">private</span> MultiLevelTimeWheel nextLevelWheel;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 延迟队列，用来存储需要延迟执行的任务  </span></span><br><span class="line">    <span class="keyword">private</span> DelayQueue&lt;Task&gt; delayQueue = <span class="keyword">new</span> <span class="title class_">DelayQueue</span>&lt;&gt;();  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">MultiLevelTimeWheel</span><span class="params">()</span> &#123;  </span><br><span class="line">        <span class="built_in">this</span>.timeSlots = <span class="keyword">new</span> <span class="title class_">TimeSlot</span>[WHEEL_SIZE];  </span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; WHEEL_SIZE; i++) &#123;  </span><br><span class="line">            <span class="built_in">this</span>.timeSlots[i] = <span class="keyword">new</span> <span class="title class_">TimeSlot</span>();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 添加任务  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addTask</span><span class="params">(Task task)</span> &#123;  </span><br><span class="line">        <span class="type">long</span> <span class="variable">delay</span> <span class="operator">=</span> task.getDelay(TimeUnit.SECONDS);  </span><br><span class="line">        <span class="keyword">if</span> (delay &lt; WHEEL_SIZE) &#123;  </span><br><span class="line">            <span class="comment">// 在当前时间轮的对应时间槽中添加任务  </span></span><br><span class="line">            <span class="type">int</span> <span class="variable">index</span> <span class="operator">=</span> (currentSlotIndex + (<span class="type">int</span>) delay) % WHEEL_SIZE;  </span><br><span class="line">            timeSlots[index].addTask(task);  </span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">            <span class="comment">// 在下一级时间轮中添加任务  </span></span><br><span class="line">            <span class="keyword">if</span> (nextLevelWheel == <span class="literal">null</span>) &#123;  </span><br><span class="line">                <span class="keyword">synchronized</span> (<span class="built_in">this</span>) &#123;  </span><br><span class="line">                    <span class="keyword">if</span> (nextLevelWheel == <span class="literal">null</span>) &#123;  </span><br><span class="line">                        nextLevelWheel = <span class="keyword">new</span> <span class="title class_">MultiLevelTimeWheel</span>();  </span><br><span class="line">                    &#125;  </span><br><span class="line">                &#125;  </span><br><span class="line">            &#125;  </span><br><span class="line">            nextLevelWheel.addTask(task);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 执行任务  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;  </span><br><span class="line">        <span class="comment">// 获取延迟队列中已经到期的任务  </span></span><br><span class="line">        <span class="type">Task</span> <span class="variable">task</span> <span class="operator">=</span> delayQueue.poll();  </span><br><span class="line">        <span class="keyword">while</span> (task != <span class="literal">null</span>) &#123;  </span><br><span class="line">            addTask(task);  </span><br><span class="line">            task = delayQueue.poll();  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="comment">// 执行当前时间槽中的任务  </span></span><br><span class="line">        timeSlots[currentSlotIndex].run();  </span><br><span class="line">        <span class="comment">// 指针向前移动一格  </span></span><br><span class="line">        currentSlotIndex = (currentSlotIndex + <span class="number">1</span>) % WHEEL_SIZE;  </span><br><span class="line">        <span class="comment">// 如果有下一级时间轮，则执行下一级时间轮的任务  </span></span><br><span class="line">        <span class="keyword">if</span> (nextLevelWheel != <span class="literal">null</span>) &#123;  </span><br><span class="line">            nextLevelWheel.run();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 时间轮中的时间槽，用来存储任务  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">class</span> <span class="title class_">TimeSlot</span> &#123;  </span><br><span class="line">        <span class="keyword">private</span> <span class="type">TaskList</span> <span class="variable">taskList</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TaskList</span>();  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addTask</span><span class="params">(Task task)</span> &#123;  </span><br><span class="line">            taskList.addTask(task);  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;  </span><br><span class="line">            taskList.run();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 任务链表  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">class</span> <span class="title class_">TaskList</span> &#123;  </span><br><span class="line">        <span class="keyword">private</span> TaskNode head;  </span><br><span class="line">        <span class="keyword">private</span> TaskNode tail;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">addTask</span><span class="params">(Task task)</span> &#123;  </span><br><span class="line">            <span class="type">TaskNode</span> <span class="variable">node</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TaskNode</span>(task);  </span><br><span class="line">            <span class="keyword">if</span> (head == <span class="literal">null</span>) &#123;  </span><br><span class="line">                head = tail = node;  </span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">                tail.next = node;  </span><br><span class="line">                tail = node;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;  </span><br><span class="line">            <span class="type">TaskNode</span> <span class="variable">node</span> <span class="operator">=</span> head;  </span><br><span class="line">            <span class="keyword">while</span> (node != <span class="literal">null</span>) &#123;  </span><br><span class="line">                node.task.run();  </span><br><span class="line">                node = node.next;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 任务节点  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">TaskNode</span> &#123;  </span><br><span class="line">        <span class="keyword">private</span> Task     task;  </span><br><span class="line">        <span class="keyword">private</span> TaskNode next;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="title function_">TaskNode</span><span class="params">(Task task)</span> &#123;  </span><br><span class="line">            <span class="built_in">this</span>.task = task;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">// 任务类，实现Delayed接口  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Task</span> <span class="keyword">implements</span> <span class="title class_">Delayed</span> &#123;  </span><br><span class="line">        <span class="keyword">private</span> <span class="type">long</span>     startTime; <span class="comment">// 任务开始时间  </span></span><br><span class="line">        <span class="keyword">private</span> Runnable runnable; <span class="comment">// 任务执行的内容  </span></span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="title function_">Task</span><span class="params">(<span class="type">long</span> delay, Runnable runnable)</span> &#123;  </span><br><span class="line">            <span class="built_in">this</span>.startTime = System.currentTimeMillis() + delay * <span class="number">1000</span>;  </span><br><span class="line">            <span class="built_in">this</span>.runnable = runnable;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="meta">@Override</span>  </span><br><span class="line">        <span class="keyword">public</span> <span class="type">long</span> <span class="title function_">getDelay</span><span class="params">(TimeUnit unit)</span> &#123;  </span><br><span class="line">            <span class="type">long</span> <span class="variable">delay</span> <span class="operator">=</span> startTime - System.currentTimeMillis();  </span><br><span class="line">            <span class="keyword">return</span> unit.convert(delay, TimeUnit.MILLISECONDS);  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="meta">@Override</span>  </span><br><span class="line">        <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compareTo</span><span class="params">(Delayed o)</span> &#123;  </span><br><span class="line">            <span class="type">long</span> <span class="variable">delay</span> <span class="operator">=</span> getDelay(TimeUnit.MILLISECONDS) - o.getDelay(TimeUnit.MILLISECONDS);  </span><br><span class="line">            <span class="keyword">if</span> (delay &lt; <span class="number">0</span>) &#123;  </span><br><span class="line">                <span class="keyword">return</span> -<span class="number">1</span>;  </span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (delay &gt; <span class="number">0</span>) &#123;  </span><br><span class="line">                <span class="keyword">return</span> <span class="number">1</span>;  </span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;  </span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;  </span><br><span class="line">            runnable.run();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException &#123;  </span><br><span class="line">        <span class="type">MultiLevelTimeWheel</span> <span class="variable">timeWheel</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">MultiLevelTimeWheel</span>();  </span><br><span class="line">        <span class="comment">// 添加10个任务，分别延迟1秒、2秒、3秒、4秒、5秒、6秒、7秒、8秒、9秒和10秒执行  </span></span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt;= <span class="number">10</span>; i++) &#123;  </span><br><span class="line">            <span class="keyword">final</span> <span class="type">int</span> <span class="variable">delay</span> <span class="operator">=</span> i;  </span><br><span class="line">            timeWheel.addTask(<span class="keyword">new</span> <span class="title class_">Task</span>(delay, () -&gt; System.out.println(<span class="string">&quot;Task &quot;</span> + delay + <span class="string">&quot; is executed. now: &quot;</span> + <span class="keyword">new</span> <span class="title class_">Date</span>().getTime())));  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="comment">// 每秒钟执行一次时间轮  </span></span><br><span class="line">        <span class="keyword">while</span> (<span class="literal">true</span>) &#123;  </span><br><span class="line">            timeWheel.run();  </span><br><span class="line">            Thread.sleep(<span class="number">1000</span>);  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<hr>
+<p>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_36645384/article/details/127463600">https://blog.csdn.net/sinat_36645384/article/details/127463600</a><br>参考链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/yu757371316/article/details/107320068">https://blog.csdn.net/yu757371316/article/details/107320068</a><br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/grandachn/article/details/130137300">https://blog.csdn.net/grandachn/article/details/130137300</a></p>
+<h1 id="三、跳表"><a href="#三、跳表" class="headerlink" title="三、跳表"></a>三、跳表</h1><h2 id="一、跳表的定义"><a href="#一、跳表的定义" class="headerlink" title="一、跳表的定义"></a>一、跳表的定义</h2><ol>
+<li>跳表，又叫做跳跃表、跳跃列表，在有序链表的基础上增加了“跳跃”的功能</li>
+<li>跳表在原来的有序链表上加上了多级索引，通过索引来快速查找；可以支持快速的删除、插入和查找操作。</li>
+<li>跳表实际上是一种增加了前向指针的链表，是一种随机化的数据结构</li>
+<li><code>Redis中</code> 的 <code>SortedSet、LevelDB</code> 中的 <code>MemTable</code> 都用到了跳表</li>
+<li>对比平衡树, 跳表的实现和维护会更加简单, 跳表的搜索、删除、添加的平均时间复杂度是 O(logn)</li>
+</ol>
+<p>它允许快速查询，插入和删除一个有序连续元素的数据链表。跳跃列表的平均查找和插入时间复杂度都是O(logn)。快速查询是通过维护一个多层次的链表，且每一层链表中的元素是前一层链表元素的子集（见右边的示意图）。一开始时，算法在最稀疏的层次进行搜索，直至需要查找的元素在该层两个相邻的元素中间。这时，算法将跳转到下一个层次，重复刚才的搜索，直到找到需要查找的元素为止。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-1.png"></p>
+<h2 id="二、跳表的数据结构图型"><a href="#二、跳表的数据结构图型" class="headerlink" title="二、跳表的数据结构图型"></a>二、跳表的数据结构图型</h2><blockquote>
+<p>使用跳表优化链表</p>
+</blockquote>
+<h3 id="跳表的演化过程"><a href="#跳表的演化过程" class="headerlink" title="跳表的演化过程"></a>跳表的演化过程</h3><p>对于单链表来说，即使数据是已经排好序的，想要查询其中的一个数据，只能从头开始遍历链表，这样效率很低，时间复杂度很高，是 O(n)。 那我们有没有什么办法来提高查询的效率呢？我们可以为链表建立一个“索引”，这样查找起来就会更快，如下图所示，我们在原始链表的基础上，每两个结点提取一个结点建立索引，我们把抽取出来的结点叫作<strong>索引层</strong>或者<strong>索引</strong>，down 表示指向原始链表节点的指针。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-2.png"></p>
+<h3 id="从单链表开始说起"><a href="#从单链表开始说起" class="headerlink" title="从单链表开始说起"></a>从单链表开始说起</h3><p>下图是一个简单的<strong>有序单链表</strong>，单链表的特性就是每个元素存放下一个元素的引用。即：通过第一个元素可以找到第二个元素，通过第二个元素可以找到第三个元素，依次类推，直到找到最后一个元素。</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-3.png">
+现在我们有个场景，想快速找到上图链表中的 10 这个元素，只能从头开始遍历链表，直到找到我们需要找的元素。查找路径：1、3、4、5、7、8、9、10。这样的查找效率很低，平均时间复杂度很高O(n)。那有没有办法提高链表的查找速度呢？如下图所示，我们从链表中每两个元素抽出来，加一级索引，一级索引指向了原始链表，即：通过一级索引 7 的down指针可以找到原始链表的 7 。那现在怎么查找 10 这个元素呢？
+<img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-4.png">
+  
+<p>先在索引找 1、4、7、9，遍历到一级索引的 9 时，发现 9 的后继节点是 13，比 10 大，于是不往后找了，而是通过 9 找到原始链表的 9，然后再往后遍历找到了我们要找的 10，遍历结束。有没有发现，加了一级索引后，查找路径：1、4、7、9、10，查找节点需要遍历的元素相对少了，我们不需要对 10 之前的所有数据都遍历，查找的效率提升了。</p>
+<p>那如果加二级索引呢？如下图所示，查找路径：1、7、9、10。是不是找 10 的效率更高了？这就是跳表的思想，用“<code>空间换时间</code>”，<strong>通过给链表建立索引，提高了查找的效率。</strong><br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-5.png"><br>可能同学们会想，从上面案例来看，提升的效率并不明显，本来需要遍历8个元素，优化了半天，还需要遍历 4 个元素，其实是因为我们的数据量太少了，当数据量足够大时，效率提升会很大。如下图所示，假如有序单链表现在有1万个元素，分别是 0~9999。现在我们建了很多级索引，最高级的索引，就两个元素 0、5000，次高级索引四个元素 0、2500、5000、7500，依次类推，当我们查找 7890 这个元素时，查找路径为 0、5000、7500 … 7890，通过最高级索引直接跳过了5000个元素，次高层索引直接跳过了2500个元素，<strong>从而使得链表能够实现二分查找</strong>。由此可以看出，<code>当元素数量较多时，索引提高的效率比较大，近似于二分查找。</code><br>![[跳表-6.png]]<br>到这里大家应该已经明白了什么是跳表。跳表是<strong>可以实现二分查找的有序链表</strong>。</p>
+<h3 id="查找的时间复杂度"><a href="#查找的时间复杂度" class="headerlink" title="查找的时间复杂度"></a>查找的时间复杂度</h3><p>既然跳表可以提升链表查找元素的效率，那查找一个元素的时间复杂度到底是多少呢？查找元素的过程是从最高级索引开始，一层一层遍历最后下沉到原始链表。所以，时间复杂度 &#x3D; 索引的高度 * 每层索引遍历元素的个数。</p>
+<p>先来求跳表的<code>索引高度</code>。如下图所示，假设每两个结点会抽出一个结点作为上一级索引的结点，原始的链表有n个元素，则一级索引有n&#x2F;2 个元素、二级索引有 n&#x2F;4 个元素、k级索引就有 n&#x2F;2k个元素。最高级索引一般有2个元素，即：最高级索引 h 满足 2 &#x3D; n&#x2F;2h，即 h &#x3D; log2n - 1，最高级索引 h 为索引层的高度加上原始数据一层，跳表的总高度 h &#x3D; log2n。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/查找的时间复杂度证明.png"><br>![[查找的时间复杂度证明.png]]<br>我们看上图中加粗的箭头，表示查找元素 x 的路径，那查找过程中每一层索引最多遍历几个元素呢？</p>
+<p>图中所示，现在到达第 k 级索引，我们发现要查找的元素 x 比 y 大比 z 小，所以，我们需要从 y 处下降到 k-1 级索引继续查找，k-1级索引中比 y 大比 z 小的只有一个 w，所以在 k-1 级索引中，我们遍历的元素最多就是 y、w、z，发现 x 比 w大比 z 小之后，再下降到 k-2 级索引。所以，k-2 级索引最多遍历的元素为 w、u、z。其实每级索引都是类似的道理，每级索引中都是两个结点抽出一个结点作为上一级索引的结点。 现在我们得出结论：当每级索引都是两个结点抽出一个结点作为上一级索引的结点时，每一层最多遍历3个结点。</p>
+<p><strong>跳表的索引高度 h &#x3D; log2n，且每层索引最多遍历 3 个元素</strong>。所以跳表中查找一个元素的时间复杂度为 O(3*logn)，省略常数即：O(logn)。</p>
+<h3 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h3><p>跳表通过建立索引，来提高查找元素的效率，就是典型的“空间换时间”的思想，所以在空间上做了一些牺牲，那空间复杂度到底是多少呢？</p>
+<p>假如原始链表包含 n 个元素，则一级索引元素个数为 n&#x2F;2、二级索引元素个数为 n&#x2F;4、三级索引元素个数为 n&#x2F;8 以此类推。所以，索引节点的总和是：n&#x2F;2 + n&#x2F;4 + n&#x2F;8 + … + 8 + 4 + 2 &#x3D; n-2，**空间复杂度是 O(n)**。</p>
+<p>如下图所示：如果每三个结点抽一个结点做为索引，索引总和数就是 n&#x2F;3 + n&#x2F;9 + n&#x2F;27 + … + 9 + 3 + 1&#x3D; n&#x2F;2，减少了一半。所以我们可以通过较少索引数来减少空间复杂度，但是相应的肯定会造成查找效率有一定下降，我们可以根据我们的应用场景来控制这个阈值，看我们更注重时间还是空间。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-7.png"></p>
+<p><strong>But</strong>，索引结点往往只需要存储 key 和几个指针，并不需要存储完整的对象，所以当对象比索引结点大很多时，索引占用的额外空间就可以忽略了。举个例子：我们现在需要用跳表来给所有学生建索引，学生有很多属性：学号、姓名、性别、身份证号、年龄、家庭住址、身高、体重等。学生的各种属性只需要在原始链表中存储一份即可，我们只需要用学生的学号（int 类型的数据）建立索引，所以索引相对原始数据而言，占用的空间可以忽略。</p>
+<h2 id="三、跳表插入数据"><a href="#三、跳表插入数据" class="headerlink" title="三、跳表插入数据"></a>三、跳表插入数据</h2><p>插入数据看起来也很简单，跳表的原始链表需要保持有序，所以我们会向查找元素一样，找到元素应该插入的位置。如下图所示，要插入数据6，整个过程类似于查找6，整个的查找路径为 1、1、1、4、4、5。查找到第底层原始链表的元素 5 时，发现 5 小于 6 但是后继节点 7 大于 6，所以应该把 6 插入到 5 之后 7 之前。整个时间复杂度为查找元素的时间复杂度 O(logn)。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-8.png"></p>
+<p>如下图所示，假如一直往原始列表中添加数据，但是不更新索引，就可能出现两个索引节点之间数据非常多的情况，极端情况，跳表退化为单链表，从而使得查找效率从 O(logn) 退化为 O(n)。那这种问题该怎么解决呢？我们需要在插入数据的时候，索引节点也需要相应的增加、或者重建索引，来避免查找效率的退化。那我们该如何去维护这个索引呢？</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-9.png">
+
+<p>比较容易理解的做法就是完全重建索引，我们每次插入数据后，都把这个跳表的索引删掉全部重建，重建索引的时间复杂度是多少呢？因为索引的空间复杂度是 O(n)，即：索引节点的个数是 O(n) 级别，每次完全重新建一个 O(n) 级别的索引，时间复杂度也是 O(n) 。造成的后果是：为了维护索引，<strong>导致每次插入数据的时间复杂度变成了 O(n)。</strong></p>
+<p>那有没有其他效率比较高的方式来维护索引呢？假如跳表每一层的晋升概率是 1&#x2F;2，最理想的索引就是在原始链表中每隔一个元素抽取一个元素做为一级索引。换种说法，<strong>我们在原始链表中随机的选 n&#x2F;2 个元素做为一级索引是不是也能通过索引提高查找的效率呢？</strong> 当然可以了，因为一般随机选的元素相对来说都是比较均匀的。如下图所示，随机选择了n&#x2F;2 个元素做为一级索引，虽然不是每隔一个元素抽取一个，但是对于查找效率来讲，影响不大，比如我们想找元素 16，仍然可以通过一级索引，使得遍历路径较少了将近一半。如果抽取的一级索引的元素恰好是前一半的元素 1、3、4、5、7、8，那么查找效率确实没有提升，但是这样的概率太小了。我们可以认为：当原始链表中<strong>元素数量足够大</strong>，且<strong>抽取足够随机</strong>的话，我们得到的索引是均匀的。我们要清楚设计良好的数据结构都是为了应对大数据量的场景，如果原始链表只有 5 个元素，那么依次遍历 5 个元素也没有关系，因为数据量太少了。所以，我们可以维护一个这样的索引：<strong>随机选 n&#x2F;2 个元素做为一级索引、随机选 n&#x2F;4 个元素做为二级索引、随机选 n&#x2F;8 个元素做为三级索引，依次类推，一直到最顶层索引</strong>。这里每层索引的元素个数已经确定，且每层索引元素选取的足够随机，所以可以通过索引来提升跳表的查找效率。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-10.png"></p>
+<p>那代码该如何实现，才能使跳表满足上述这个样子呢？可以在每次新插入元素的时候，尽量让该元素有 1&#x2F;2 的几率建立一级索引、1&#x2F;4 的几率建立二级索引、1&#x2F;8 的几率建立三级索引，以此类推，就能满足我们上面的条件。现在我们就需要一个概率算法帮我们把控这个 1&#x2F;2、1&#x2F;4、1&#x2F;8 … ，<strong>当每次有数据要插入时，先通过概率算法告诉我们这个元素需要插入到几级索引中</strong>，然后开始维护索引并把数据插入到原始链表中。下面开始讲解这个概率算法代码如何实现。</p>
+<p>我们可以实现一个 randomLevel() 方法，该方法会随机生成 1~MAX_LEVEL 之间的数（MAX_LEVEL表示索引的最高层数），且该方法<strong>有 1&#x2F;2 的概率返回 1、1&#x2F;4 的概率返回 2、1&#x2F;8的概率返回 3，以此类推</strong>。</p>
+<ul>
+<li>randomLevel() 方法返回 1 表示当前插入的该元素不需要建索引，只需要存储数据到原始链表即可（概率 1&#x2F;2）</li>
+<li>randomLevel() 方法返回 2 表示当前插入的该元素需要建一级索引（概率 1&#x2F;4）</li>
+<li>randomLevel() 方法返回 3 表示当前插入的该元素需要建二级索引（概率 1&#x2F;8）</li>
+<li>randomLevel() 方法返回 4 表示当前插入的该元素需要建三级索引（概率 1&#x2F;16）</li>
+<li>。。。以此类推</li>
+</ul>
+<p>所以，通过 randomLevel() 方法，我们可以控制整个跳表各级索引中元素的个数。<strong>重点来了</strong>：randomLevel() 方法返回 2 的时候会建立一级索引，我们想要一级索引中元素个数占原始数据的 1&#x2F;2，但是 randomLevel() 方法返回 2 的概率为 1&#x2F;4，那是不是有矛盾呢？明明说好的 1&#x2F;2，结果一级索引元素个数怎么变成了原始链表的 1&#x2F;4？<strong>我们先看下图</strong>，应该就明白了。</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-11.png">
+
+  
+<p>假设我们在插入元素 6 的时候，randomLevel() 方法返回 1，则我们不会为 6 建立索引。插入 7 的时候，randomLevel() 方法返回3 ，所以我们需要为元素 7 建立二级索引。这里我们发现了一个特点：当建立二级索引的时候，同时也会建立一级索引；当建立三级索引时，同时也会建立一级、二级索引。所以，一级索引中元素的个数等于 <em>[ 原始链表元素个数 ]</em> * _[ randomLevel() 方法返回值 &gt; 1 的概率 ]_。因为 randomLevel() 方法返回值 &gt; 1就会建索引，凡是建索引，无论几级索引必然有一级索引，<strong>所以一级索引中元素个数占原始数据个数的比率为 randomLevel() 方法返回值 &gt; 1 的概率</strong>。那 randomLevel() 方法返回值 &gt; 1 的概率是多少呢？因为 randomLevel() 方法随机生成 1~MAX_LEVEL 的数字，且 randomLevel() 方法返回值 1 的概率为 1&#x2F;2，则 randomLevel() 方法返回值 &gt; 1 的概率为 1 - 1&#x2F;2 &#x3D; 1&#x2F;2。即<strong>通过上述流程实现了一级索引中元素个数占原始数据个数的 1&#x2F;2</strong>。</p>
+<p>同理，当 randomLevel() 方法返回值 &gt; 2 时，会建立二级或二级以上索引，都会在二级索引中增加元素，因此<strong>二级索引中元素个数占原始数据的比率为 randomLevel() 方法返回值 &gt; 2 的概率</strong>。 randomLevel() 方法返回值 &gt; 2 的概率为 1 减去 randomLevel() &#x3D; 1 或 &#x3D;2 的概率，即 1 - 1&#x2F;2 - 1&#x2F;4 &#x3D; 1&#x2F;4。OK，达到了我们设计的目标：<strong>二级索引中元素个数占原始数据的 1&#x2F;4</strong>。</p>
+<p>以此类推，可以得出，遵守以下两个条件：</p>
+<ul>
+<li>randomLevel() 方法，随机生成 1~MAX_LEVEL 之间的数（MAX_LEVEL表示索引的最高层数），且<strong>有 1&#x2F;2的概率返回 1、1&#x2F;4的概率返回 2、1&#x2F;8的概率返回 3 …</strong></li>
+<li>randomLevel() 方法返回 1 不建索引、返回2建一级索引、返回 3 建二级索引、返回 4 建三级索引 …</li>
+</ul>
+<p>就可以满足我们想要的结果，即：一级索引中元素个数应该占原始数据的 1&#x2F;2，二级索引中元素个数占原始数据的 1&#x2F;4，三级索引中元素个数占原始数据的 1&#x2F;8 ，依次类推，一直到最顶层索引。</p>
+<p>但是问题又来了，怎么设计这么一个 randomLevel() 方法呢？直接撸代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 该 randomLevel 方法会随机生成 1~MAX_LEVEL 之间的数，且 ：</span></span><br><span class="line"><span class="comment">//        1/2 的概率返回 1</span></span><br><span class="line"><span class="comment">//        1/4 的概率返回 2</span></span><br><span class="line"><span class="comment">//        1/8 的概率返回 3 以此类推</span></span><br><span class="line"><span class="keyword">private</span> <span class="type">int</span> <span class="title function_">randomLevel</span><span class="params">()</span> &#123;</span><br><span class="line">  <span class="type">int</span> <span class="variable">level</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">  <span class="comment">// 当 level &lt; MAX_LEVEL，且随机数小于设定的晋升概率时，level + 1</span></span><br><span class="line">  <span class="keyword">while</span> (Math.random() &lt; SKIPLIST_P &amp;&amp; level &lt; MAX_LEVEL)</span><br><span class="line">    level += <span class="number">1</span>;</span><br><span class="line">  <span class="keyword">return</span> level;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述代码可以实现我们的功能，而且，我们的案例中晋升概率 <strong>SKIPLIST_P</strong> 设置的 <code>1/2</code>，即：<code>每两个结点抽出一个结点作为上一级索引的结点</code>。如果我们想节省空间利用率，<strong>可以适当的降低代码中的 SKIPLIST_P</strong>，从而减少索引元素个数，<strong>Redis 的 zset 中 SKIPLIST_P 设定的 0.25</strong>。下图所示，是Redis <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/antirez/redis/blob/unstable/src/t_zset.c">t_zset.c</a> 中 zslRandomLevel 函数的实现：</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-12.png">
+  
+<p>Redis 源码中 <code>(random()&amp;0xFFFF) &lt; (ZSKIPLIST_P * 0xFFFF)</code> 在功能上等价于我代码中的 <code>Math.random() &lt; SKIPLIST_P</code> ，只不过 Redis 作者 <a target="_blank" rel="noopener" href="https://links.jianshu.com/go?to=https://github.com/antirez">antirez</a> 使用位运算来提高浮点数比较的效率。</p>
+<p>整体思路大家应该明白了，那插入数据时维护索引的时间复杂度是多少呢？**元素插入到单链表的时间复杂度为 O(1)**，我们索引的高度最多为 logn，当插入一个元素 x 时，最坏的情况就是元素 x 需要插入到每层索引中，所以插入数据到各层索引中，最坏时间复杂度是 O(logn)。</p>
+<h3 id="整体插入过程"><a href="#整体插入过程" class="headerlink" title="整体插入过程"></a>整体插入过程</h3><p>过程大概理解了，再通过一个例子描述一下跳表插入数据的全流程。现在我们要插入数据 6 到跳表中，首先 randomLevel() 返回 3，表示<strong>需要建二级索引</strong>，即：一级索引和二级索引需要增加元素 6。该跳表目前最高三级索引，首先找到三级索引的 1，发现 6 比 1大比 13小，所以，从 1 下沉到二级索引。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-13.png"></p>
+<p>下沉到二级索引后，发现 6 比 1 大比 7 小，此时需要在二级索引中 1 和 7 之间加一个元素6 ，并从元素 1 继续下沉到一级索引。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-14.png"><br>下沉到一级索引后，发现 6 比 1 大比 4 大，所以往后查找，发现 6 比 4 大比 7 小，此时需要在一级索引中 4 和 7 之间加一个元素 6 ，并把二级索引的 6 指向 一级索引的 6，最后，从元素 4 继续下沉到原始链表。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-15.png"><br>下沉到原始链表后，就比较简单了，发现 4、5 比 6小，7比6大，所以将6插入到 5 和 7 之间即可，整个插入过程结束。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/跳表-16.png"></p>
+<p>整个插入过程的路径与查找元素路径类似， 每层索引中插入元素的时间复杂度 O(1)，所以整个插入的时间复杂度是 O(logn)。</p>
+<h2 id="四、跳表删除数据"><a href="#四、跳表删除数据" class="headerlink" title="四、跳表删除数据"></a>四、跳表删除数据</h2><p>跳表中，删除元素的时间复杂度是多少呢？</p>
+<p>删除元素的过程跟查找元素的过程类似，只不过在查找的路径上如果发现了要删除的元素 x，则执行删除操作。跳表中，每一层索引其实都是一个有序的单链表，单链表删除元素的时间复杂度为 O(1)，索引层数为 logn 表示最多需要删除 logn 个元素，所以删除元素的总时间包含 <em>查找元素的时间</em> 加 <em>删除 logn个元素的时间</em> 为 O(logn) + O(logn) &#x3D; 2 O(logn)，忽略常数部分，删除元素的时间复杂度为 O(logn)。</p>
+<h2 id="五、总结"><a href="#五、总结" class="headerlink" title="五、总结"></a>五、总结</h2><ol>
+<li><p>跳表是可以实现二分查找的有序链表；</p>
+</li>
+<li><p>每个元素插入时随机生成它的level；</p>
+</li>
+<li><p>最底层包含所有的元素；</p>
+</li>
+<li><p>如果一个元素出现在level(x)，那么它肯定出现在x以下的level中；</p>
+</li>
+<li><p>每个索引节点包含两个指针，一个向下，一个向右；（笔记目前看过的各种跳表源码实现包括Redis 的zset 都没有向下的指针，那怎么从二级索引跳到一级索引呢？留个悬念，看源码吧，文末有跳表实现源码）</p>
+</li>
+<li><p>跳表查询、插入、删除的时间复杂度为O(log n)，与平衡二叉树接近；</p>
+</li>
+</ol>
+<h2 id="六、Java实现跳表"><a href="#六、Java实现跳表" class="headerlink" title="六、Java实现跳表"></a>六、Java实现跳表</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> 算法.skipList;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> com.alibaba.fastjson.JSON;  </span><br><span class="line"><span class="keyword">import</span> lombok.Data;  </span><br><span class="line">  </span><br><span class="line"><span class="keyword">import</span> java.util.Random;  </span><br><span class="line"><span class="keyword">import</span> java.util.Stack;  </span><br><span class="line"><span class="meta">@Data</span>  </span><br><span class="line"><span class="keyword">class</span> <span class="title class_">SkipNode</span>&lt;T&gt;  </span><br><span class="line">&#123;  </span><br><span class="line">    <span class="type">int</span> key;  </span><br><span class="line">    T value;  </span><br><span class="line">    SkipNode right,down;<span class="comment">//左右上下四个方向的指针  </span></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">SkipNode</span> <span class="params">(<span class="type">int</span> key,T value)</span> &#123;  </span><br><span class="line">        <span class="built_in">this</span>.key=key;  </span><br><span class="line">        <span class="built_in">this</span>.value=value;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">&#125;  </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SkipList</span> &lt;T&gt; &#123;  </span><br><span class="line">  </span><br><span class="line">    SkipNode headNode;<span class="comment">//头节点，入口  </span></span><br><span class="line">    <span class="type">int</span> highLevel;<span class="comment">//层数  </span></span><br><span class="line">    Random random;<span class="comment">// 用于投掷硬币  </span></span><br><span class="line">    <span class="keyword">final</span> <span class="type">int</span> <span class="variable">MAX_LEVEL</span> <span class="operator">=</span> <span class="number">32</span>;<span class="comment">//最大的层  </span></span><br><span class="line">    SkipList()&#123;  </span><br><span class="line">        random=<span class="keyword">new</span> <span class="title class_">Random</span>();  </span><br><span class="line">        headNode=<span class="keyword">new</span> <span class="title class_">SkipNode</span>(Integer.MIN_VALUE,<span class="literal">null</span>);  </span><br><span class="line">        highLevel=<span class="number">0</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> SkipNode <span class="title function_">search</span><span class="params">(<span class="type">int</span> key)</span> &#123;  </span><br><span class="line">        SkipNode team=headNode;  </span><br><span class="line">        <span class="keyword">while</span> (team!=<span class="literal">null</span>) &#123;  </span><br><span class="line">            <span class="keyword">if</span>(team.key==key)  </span><br><span class="line">            &#123;  </span><br><span class="line">                <span class="keyword">return</span>  team;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(team.right==<span class="literal">null</span>)<span class="comment">//右侧没有了，只能下降  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(team.right.key&gt;key)<span class="comment">//需要下降去寻找  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="comment">//右侧比较小向右  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team=team.right;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">return</span> <span class="literal">null</span>;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">delete</span><span class="params">(<span class="type">int</span> key)</span><span class="comment">//删除不需要考虑层数  </span></span><br><span class="line">    &#123;  </span><br><span class="line">        SkipNode team=headNode;  </span><br><span class="line">        <span class="keyword">while</span> (team!=<span class="literal">null</span>) &#123;  </span><br><span class="line">            <span class="keyword">if</span> (team.right == <span class="literal">null</span>) &#123;<span class="comment">//右侧没有了，说明这一层找到，没有只能下降  </span></span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(team.right.key==key)<span class="comment">//找到节点，右侧即为待删除节点  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team.right=team.right.right;<span class="comment">//删除右侧节点  </span></span><br><span class="line">                team=team.down;<span class="comment">//向下继续查找删除  </span></span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(team.right.key&gt;key)<span class="comment">//右侧已经不可能了，向下  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> &#123; <span class="comment">//节点还在右侧  </span></span><br><span class="line">                team=team.right;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">add</span><span class="params">(SkipNode node)</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">  </span><br><span class="line">        <span class="type">int</span> key=node.key;  </span><br><span class="line">        SkipNode findNode=search(key);  </span><br><span class="line">        <span class="keyword">if</span>(findNode!=<span class="literal">null</span>)<span class="comment">//如果存在这个key的节点  </span></span><br><span class="line">        &#123;  </span><br><span class="line">            findNode.value=node.value;  </span><br><span class="line">            <span class="keyword">return</span>;        &#125;  </span><br><span class="line">  </span><br><span class="line">        Stack&lt;SkipNode&gt;stack=<span class="keyword">new</span> <span class="title class_">Stack</span>&lt;SkipNode&gt;();<span class="comment">//存储向下的节点，这些节点可能在右侧插入节点  </span></span><br><span class="line">        SkipNode team=headNode;<span class="comment">//查找待插入的节点   找到最底层的哪个节点。  </span></span><br><span class="line">        <span class="keyword">while</span> (team!=<span class="literal">null</span>) &#123;<span class="comment">//进行查找操作  </span></span><br><span class="line">            <span class="keyword">if</span>(team.right==<span class="literal">null</span>)<span class="comment">//右侧没有了，只能下降  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                stack.add(team);<span class="comment">//将曾经向下的节点记录一下  </span></span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(team.right.key&gt;key)<span class="comment">//需要下降去寻找  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                stack.add(team);<span class="comment">//将曾经向下的节点记录一下  </span></span><br><span class="line">                team=team.down;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span> <span class="comment">//向右  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                team=team.right;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="type">int</span> level=<span class="number">1</span>;<span class="comment">//当前层数，从第一层添加(第一层必须添加，先添加再判断)  </span></span><br><span class="line">        SkipNode downNode=<span class="literal">null</span>;<span class="comment">//保持前驱节点(即down的指向，初始为null)  </span></span><br><span class="line">        <span class="keyword">while</span> (!stack.isEmpty()) &#123;  </span><br><span class="line">            <span class="comment">//在该层插入node  </span></span><br><span class="line">            team=stack.pop();<span class="comment">//抛出待插入的左侧节点  </span></span><br><span class="line">            SkipNode nodeTeam=<span class="keyword">new</span> <span class="title class_">SkipNode</span>(node.key, node.value);<span class="comment">//节点需要重新创建  </span></span><br><span class="line">            nodeTeam.down=downNode;<span class="comment">//处理竖方向  </span></span><br><span class="line">            downNode=nodeTeam;<span class="comment">//标记新的节点下次使用  </span></span><br><span class="line">            <span class="keyword">if</span>(team.right==<span class="literal">null</span>) &#123;<span class="comment">//右侧为null 说明插入在末尾  </span></span><br><span class="line">                team.right=nodeTeam;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="comment">//水平方向处理  </span></span><br><span class="line">            <span class="keyword">else</span> &#123;<span class="comment">//右侧还有节点，插入在两者之间  </span></span><br><span class="line">                nodeTeam.right=team.right;  </span><br><span class="line">                team.right=nodeTeam;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="comment">//考虑是否需要向上  </span></span><br><span class="line">            <span class="keyword">if</span>(level&gt;MAX_LEVEL)<span class="comment">//已经到达最高级的节点啦  </span></span><br><span class="line">                <span class="keyword">break</span>;  </span><br><span class="line">            <span class="type">double</span> num=random.nextDouble();<span class="comment">//[0-1]随机数  </span></span><br><span class="line">            <span class="keyword">if</span>(num&gt;<span class="number">0.5</span>)<span class="comment">//运气不好结束  </span></span><br><span class="line">                <span class="keyword">break</span>;  </span><br><span class="line">            level++;  </span><br><span class="line">            <span class="keyword">if</span>(level&gt;highLevel)<span class="comment">//比当前最大高度要高但是依然在允许范围内 需要改变head节点  </span></span><br><span class="line">            &#123;  </span><br><span class="line">                highLevel=level;  </span><br><span class="line">                <span class="comment">//需要创建一个新的节点  </span></span><br><span class="line">                SkipNode highHeadNode=<span class="keyword">new</span> <span class="title class_">SkipNode</span>(Integer.MIN_VALUE, <span class="literal">null</span>);  </span><br><span class="line">                highHeadNode.down=headNode;  </span><br><span class="line">                headNode=highHeadNode;<span class="comment">//改变head  </span></span><br><span class="line">                stack.add(headNode);<span class="comment">//下次抛出head  </span></span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">printList</span><span class="params">()</span> &#123;  </span><br><span class="line">        SkipNode teamNode=headNode;  </span><br><span class="line">        <span class="type">int</span> index=<span class="number">1</span>;  </span><br><span class="line">        SkipNode last=teamNode;  </span><br><span class="line">        <span class="keyword">while</span> (last.down!=<span class="literal">null</span>)&#123;  </span><br><span class="line">            last=last.down;  </span><br><span class="line">        &#125;  </span><br><span class="line">        <span class="keyword">while</span> (teamNode!=<span class="literal">null</span>) &#123;  </span><br><span class="line">            SkipNode enumNode=teamNode.right;  </span><br><span class="line">            SkipNode enumLast=last.right;  </span><br><span class="line">            System.out.printf(<span class="string">&quot;%-8s&quot;</span>,<span class="string">&quot;head-&gt;&quot;</span>);  </span><br><span class="line">            <span class="keyword">while</span> (enumLast!=<span class="literal">null</span>&amp;&amp;enumNode!=<span class="literal">null</span>) &#123;  </span><br><span class="line">                <span class="keyword">if</span>(enumLast.key==enumNode.key)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    System.out.printf(<span class="string">&quot;%-5s&quot;</span>,enumLast.key+<span class="string">&quot;-&gt;&quot;</span>);  </span><br><span class="line">                    enumLast=enumLast.right;  </span><br><span class="line">                    enumNode=enumNode.right;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span>&#123;  </span><br><span class="line">                    enumLast=enumLast.right;  </span><br><span class="line">                    System.out.printf(<span class="string">&quot;%-5s&quot;</span>,<span class="string">&quot;&quot;</span>);  </span><br><span class="line">                &#125;  </span><br><span class="line">  </span><br><span class="line">            &#125;  </span><br><span class="line">            teamNode=teamNode.down;  </span><br><span class="line">            index++;  </span><br><span class="line">            System.out.println();  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;  </span><br><span class="line">        SkipList&lt;Integer&gt;list=<span class="keyword">new</span> <span class="title class_">SkipList</span>&lt;Integer&gt;();  </span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;<span class="number">20</span>;i++)  </span><br><span class="line">        &#123;  </span><br><span class="line">            list.add(<span class="keyword">new</span> <span class="title class_">SkipNode</span>(i,<span class="number">666</span>));  </span><br><span class="line">        &#125;  </span><br><span class="line">  </span><br><span class="line">        <span class="type">SkipNode</span> <span class="variable">search</span> <span class="operator">=</span> list.search(<span class="number">1</span>);  </span><br><span class="line">        System.out.println(<span class="string">&quot;search = &quot;</span> + JSON.toJSONString(search));  </span><br><span class="line">        <span class="comment">//list.printList();  </span></span><br><span class="line">        <span class="comment">//list.delete(4);        //list.delete(8);        //list.printList();    &#125;  </span></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="工业上其他使用跳表的场景"><a href="#工业上其他使用跳表的场景" class="headerlink" title="工业上其他使用跳表的场景"></a>工业上其他使用跳表的场景</h3><p>在博客上从来没有见过有同学讲述 HBase MemStore 的数据结构，其实 HBase MemStore 内部存储数据就使用的跳表。为什么呢？HBase 属于 LSM Tree 结构的数据库，LSM Tree 结构的数据库有个特点，实时写入的数据先写入到内存，内存达到阈值往磁盘 flush 的时候，会生成类似于 StoreFile 的<strong>有序文件</strong>，而跳表恰好就是天然有序的，所以在 flush 的时候效率很高，而且跳表查找、插入、删除性能都很高，这应该是 HBase MemStore 内部存储数据使用跳表的原因之一。HBase 使用的是 java.util.concurrent 下的 ConcurrentSkipListMap()。</p>
+<p>Google 开源的 key&#x2F;value 存储引擎 LevelDB 以及 Facebook 基于 LevelDB 优化的 RocksDB 都是 LSM Tree 结构的数据库，他们内部的 MemTable 都是使用了跳表这种数据结构。</p>
+<hr>
+<p>链接：<a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1710441201075985657&amp;wfr=spider&amp;for=pc">https://baijiahao.baidu.com/s?id=1710441201075985657&amp;wfr=spider&amp;for=pc</a><br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45480785/article/details/116293416">https://blog.csdn.net/weixin_45480785/article/details/116293416</a><br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9d8296562806">https://www.jianshu.com/p/9d8296562806</a>  </p>
+<h1 id="四、LSM-Tree"><a href="#四、LSM-Tree" class="headerlink" title="四、LSM-Tree"></a>四、LSM-Tree</h1><p>LSM-tree（Log-structured merge-tree），因其独特的数据组织方式（Log-structured）和需要在后台不断合并(Merge)的维护方式而得名。又因为顺序写（Sequentially Write）的模式，而取代B+ Tree（更新时会产生慢出2个数量级的随机写），被广泛应用于写密集型（Write-intensive）的数据库。</p>
+<p>LSM-tree的思想和名字，直接来源于1992年发表的_Log Structured File System（LSF）_。LSF的作者之一John Ousterhout当时还在Berkeley，21年后，他作为Stanford的教授和他的PhD 学生Diego Ongaro完成了_Raft_论文，在分布式共识（Consensus）领域开辟了新天地。</p>
+<p>1996年，LSM-tree的论文由Patrick O’Neil等人正式<a href="https://link.zhihu.com/?target=https://www.cs.umb.edu/~poneil/lsmtree.pdf">发表</a>。2006年，Google的<a href="https://link.zhihu.com/?target=https://static.googleusercontent.com/media/research.google.com/zh-CN//archive/bigtable-osdi06.pdf">Bigtable</a>问世（带来了memtable, SSTable的概念），在催生了HBase、Cassandra等NoSQL开源项目的同时，也让LSM-tree真正大规模地进入工业界的视线。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-1.png"><br>2011年，Google工程师Sanjay Ghemawat和Jeff Dean开源了<a href="https://link.zhihu.com/?target=https://github.com/google/leveldb">LevelDB</a>。2013年，Facebook在LevelDB的基础上开发了<a href="https://link.zhihu.com/?target=https://rocksdb.org/">RocksDB</a>。自此，LSM-tree成为存储引擎（Storage Engine）中不可忽视的一种数据结构，在新硬件、新数据负载不断出现的今天，仍在不断地被研究和扩展。</p>
+<p><strong>LSM Tree</strong>（log-structured merge-tree）是一种文件组织结构的数据结构，目前在不少数据库中都有使用到，如SQLite、LevelDB、HBase在Mongodb中也有一个LSM引擎；<br>在传统的关系型数据库中使用的是B-&#x2F;B+ tree作为索引的数据结构，B tree的查询性能很高，为O(log n)复杂度，但其写性能并达不到O(log n)，而在传统数据库中每次插入、删除数据都要更新索引，每次更新索引都会有一次磁盘IO，频繁写时其性能较低；<br>LSM Tree查询性能达不到理论的**O(log n)**，但效率并不慢，且其避免了频繁写时的磁盘IO，使得非常适用于KV与日志型数据库；<br><img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-2.png"></p>
+<h3 id="什么是LSM-Tree"><a href="#什么是LSM-Tree" class="headerlink" title="什么是LSM-Tree"></a>什么是LSM-Tree</h3><p>LSM-Tree全称是Log Structured Merge Tree，是一种分层，有序，面向磁盘的数据结构，其核心思想是充分了利用了，磁盘批量的顺序写要远比随机写性能高出很多，</p>
+<p>围绕这一原理进行设计和优化，以此让写性能达到最优，正如我们普通的Log的写入方式，这种结构的写入，全部都是以Append的模式追加，不存在删除和修改。当然有得就有舍，这种结构虽然大大提升了数据的写入能力，却是以牺牲部分读取性能为代价，故此这种结构通常适合于写多读少的场景。故LSM被设计来提供比传统的B+树或者ISAM更好的写操作吞吐量，通过消去随机的本地更新操作来达到这个目标。这里面最典型的例子就属于<code>Kakfa</code>了，<code>把磁盘顺序写发挥到了极致</code>，故而在大数据领域成为了互联网公司标配的分布式消息中间件组件。</p>
+<p>虽然这种结构的写非常简单高效，但其<strong>缺点是对读取特别是随机读很不友好</strong>，这也是为什么日志通常用在下面的两种简单的场景：</p>
+<p>（1） 数据是被整体访问的，大多数数据库的WAL（write ahead log）也称预写log，包括mysql的Binlog等</p>
+<p>（2） 数据是通过文件的偏移量offset访问的，比如Kafka。</p>
+<p>想要支持更复杂和高效的读取，比如按key查询和按range查询，就得需要做一步的设计，这也是LSM-Tree结构，除了利用磁盘顺序写之外，还划分了内存+磁盘多层的合并结构的原因，正是基于这种结构再加上不同的优化实现，才造就了在这之上的各种独具特点的NoSQL数据库，如Hbase，Cassandra，Leveldb，RocksDB，MongoDB，TiDB等。</p>
+<h3 id="LSM-Tree-合并思想"><a href="#LSM-Tree-合并思想" class="headerlink" title="LSM-Tree 合并思想"></a>LSM-Tree 合并思想</h3><p>LSM 树由两个或以上的存储结构组成，比如在论文中为了方便说明使用了最简单的两个存储结构。一个存储结构常驻内存中，称为 C0 tree ，具体可以是任何方便健值查找的数据结构，比如红黑树、 map 之类，甚至可以是跳表。另外一个存储结构常驻在硬盘中，称为 C1 tree ，具体结构类似 B 树。 C1 所有节点都是 100% 满的，节点的大小为磁盘块大小。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-3.png"><br> 如上图所示，数据库采用了基于 LSM Tree 结构作为数据库的存储引擎，数据被分为基线数据（ SSTable ）和增量数据（ MemTable ）两部分，基线数据被保存在磁盘中，当需要读取的时候会被加载到数据库的缓存中，当数据被不断插入（或者修改时）在内存中缓存增量数据，当增量数据达到一定阀值时，就把增量数据刷新到磁盘上，当磁盘上的增量数据达到一定阀值时再把磁盘上的增量数据和基线数据进行合并。这个本身是 LSM 的核心设计思想，非常朴素，就是将对数据的修改增量保持在内存中，达到指定的大小限制后将这些修改操作批量写入磁盘，从而大幅度提升性能。关于树的节点数据结构，不同数据库在基于 LSM-Tree 思想实现具体存储引擎的时候，可以根据自己的特点去定义。</p>
+<h3 id="LSM-Tree-WAL"><a href="#LSM-Tree-WAL" class="headerlink" title="LSM-Tree WAL"></a>LSM-Tree WAL</h3><p>  谈及 LSM （ Log Structured Merge Tree ）树存储引擎，从字面意思上，其实我们基本能看到两层意思，第一个是 Merge ，就是我们上一节说到的合并思想；另外一个就是 Log ，就是我们接下来要说的 WAL 文件，从下面展示的基于 LSM 存储引擎的写的流程当中，我们可以看到 WAL 就是数据库的一个日志文件。<br><img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-4.png"></p>
+<p>当插入一条数据时，数据先顺序写入磁盘保存的 WAL 文件中，之后插入到内存中的 Memtable 当中， Memtable 实际上保存的数据结构就是我们所述的内存当中的小树。这样就保证了数据的持久化，即使因为故障宕机，虽然内存里面的数据已经丢失，但是依然可以通过日志信息恢复当初内存里面的数据信息，并且都是顺序写，速度非常快。当 memtable 写入文件 SSTable 后，这个 log 文件的内容就不再需要了。而新的 memtable 会有新的 log 文件对应。</p>
+<h3 id="SSTable-和-LSM-Tree"><a href="#SSTable-和-LSM-Tree" class="headerlink" title="SSTable 和 LSM-Tree"></a>SSTable 和 LSM-Tree</h3><p>提到LSM-Tree这种结构，就得提一下LevelDB这个存储引擎，我们知道Bigtable是谷歌开源的一篇论文，很难接触到它的源代码实现。如果说Bigtable是分布式闭源的一个高性能的KV系统，那么LevelDB就是这个KV系统开源的单机版实现，最为重要的是LevelDB是由Bigtable的原作者 Jeff Dean 和 Sanjay Ghemawat 共同完成，可以说高度复刻了Bigtable 论文中对于其实现的描述。</p>
+<p>SSTable是一种拥有持久化，有序且不可变的的键值存储结构，它的key和value都是任意的字节数组，并且了提供了按指定key查找和指定范围的key区间迭代遍历的功能。SSTable内部包含了一系列可配置大小的Block块，典型的大小是64KB，关于这些Block块的index存储在SSTable的尾部，用于帮助快速查找特定的Block。当一个SSTable被打开的时候，index会被加载到内存，然后根据key在内存index里面进行一个二分查找，查到该key对应的磁盘的offset之后，然后去磁盘把响应的块数据读取出来。当然如果内存足够大的话，可以直接把SSTable直接通过MMap的技术映射到内存中，从而提供更快的查找。</p>
+<p>SSTable 在后台是要经过不断地排序合并，文件随着层次的加深，其大小也逐步变大。同时它也是可以启用压缩功能的，并且这种压缩不是将整个 SSTable 一起压缩，而是根据 locality 将数据分组，每个组分别压缩，这样的好处当读取数据的时候，我们不需要解压缩整个文件而是解压缩部分 Group 就可以读取。如图下图所示的情况， leve0 的 SSTable 达到数据量的阀值之后，会经过排序合并形成 Level1 的 SSTable ， Level1 的 SSTable 达到阀值之后，会经过排序合并成为 Level2 的 SSTable 文件。</p>
+<img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-5.png">
+
+<p>以上图中所示的文件合并过程是一个排序合并的过程，因此每一层都包含大量 SSTable 文件，但是键值值范围不重复，这样查询操作只需要查询这一层的一个 SSTable 文件即可。</p>
+<h2 id="关于LSM-Tree的读写原理"><a href="#关于LSM-Tree的读写原理" class="headerlink" title="关于LSM-Tree的读写原理"></a>关于LSM-Tree的读写原理</h2><p>在LSM-Tree里，SSTable有一份在内存里面，其他的多级在磁盘上，如下图是一份完整的LSM-Tree图示：<br><img src="https://alixjc.gitee.io/my-pages/blogImage/LSM-Tree-6.png"></p>
+<h3 id="LSM-Tree写数据的过程"><a href="#LSM-Tree写数据的过程" class="headerlink" title="LSM-Tree写数据的过程"></a>LSM-Tree写数据的过程</h3><ol>
+<li><p>当收到一个写请求时，会先把该条数据记录在WAL Log里面，用作故障恢复。</p>
+</li>
+<li><p>当写完WAL Log后，会把该条数据写入内存的SSTable里面（删除是墓碑标记，更新是新记录一条的数据），也称Memtable。注意为了维持有序性在内存里面可以采用红黑树或者跳跃表相关的数据结构。</p>
+</li>
+<li><p>当Memtable超过一定的大小后，会在内存里面冻结，变成不可变的Memtable，同时为了不阻塞写操作需要新生成一个Memtable继续提供服务。</p>
+</li>
+<li><p>把内存里面不可变的Memtable给dump到到硬盘上的SSTable层中，此步骤也称为Minor Compaction，这里需要注意在L0层的SSTable是没有进行合并的，所以这里的key range在多个SSTable中可能会出现重叠，在层数大于0层之后的SSTable，不存在重叠key。</p>
+</li>
+<li><p>当每层的磁盘上的SSTable的体积超过一定的大小或者个数，也会周期的进行合并。此步骤也称为Major Compaction，这个阶段会真正 的清除掉被标记删除掉的数据以及多版本数据的合并，避免浪费空间，注意由于SSTable都是有序的，我们可以直接采用merge sort进行高效合并。</p>
+</li>
+</ol>
+<h3 id="LSM-Tree读数据的过程"><a href="#LSM-Tree读数据的过程" class="headerlink" title="LSM-Tree读数据的过程"></a>LSM-Tree读数据的过程</h3><ol>
+<li>当收到一个读请求的时候，会直接先在内存里面查询，如果查询到就返回。</li>
+<li>如果没有查询到就会依次下沉，知道把所有的Level层查询一遍得到最终结果。</li>
+</ol>
+<p>思考查询步骤，我们会发现如果SSTable的分层越多，那么最坏的情况下要把所有的分层扫描一遍，对于这种情况肯定是需要优化的，如何优化？在 Bigtable 论文中提出了几种方式：</p>
+<p>   (1)、压缩</p>
+<pre><code>    SSTable 是可以启用压缩功能的，并且这种压缩不是将整个 SSTable 一起压缩，而是根据 locality 将数据分组，每个组分别压缩，这样的好处当读取数据的时候，我们不需要解压缩整个文件而是解压缩部分 Group 就可以读取。
+</code></pre>
+<p>   (2)、缓存</p>
+<pre><code>    因为SSTable在写入磁盘后，除了Compaction之外，是不会变化的，所以我可以将Scan的Block进行缓存，从而提高检索的效率
+</code></pre>
+<p>   (3)、索引，Bloom filters<br>        正常情况下，一个读操作是需要读取所有的 SSTable 将结果合并后返回的，但是对于某些 key 而言，有些 SSTable 是根本不包含对应数据的，因此，我们可以对每一个 SSTable 添加 Bloom Filter，因为布隆过滤器在判断一个SSTable不存在某个key的时候，那么就一定不会存在，利用这个特性可以减少不必要的磁盘扫描。</p>
+<p>   (4)、合并<br>    这个在前面的写入流程中已经介绍过，通过定期合并瘦身， 可以有效的清除无效数据，缩短读取路径，提高磁盘利用空间。但Compaction操作是非常消耗CPU和磁盘IO的，尤其是在业务高峰期，如果发生了Major Compaction，则会降低整个系统的吞吐量，这也是一些NoSQL数据库，比如Hbase里面常常会禁用Major Compaction，并在凌晨业务低峰期进行合并的原因。</p>
+<p>最后有的同学可能会问道，为什么LSM不直接顺序写入磁盘，而是需要在内存中缓冲一下？ 这个问题其实很容易解答，单条写的性能肯定没有批量写来的块，这个原理其实在Kafka里面也是一样的，虽然kafka给我们的感觉是写入后就落地，但其实并不是，本身是 可以根据条数或者时间比如200ms刷入磁盘一次，这样能大大提升写入效率。此外在LSM中，在磁盘缓冲的另一个好处是，<strong>针对新增的数据，可以直接查询返回，能够避免一定的IO操作。</strong></p>
+<h3 id="LSM-Tree-数据修改过程"><a href="#LSM-Tree-数据修改过程" class="headerlink" title="LSM-Tree 数据修改过程"></a>LSM-Tree 数据修改过程</h3><p>LSM-Tree 存储引擎的更新过程其实并不存在，它不会像 B 树存储引擎那样，先经过检索过程，然后再进行修改。它的更新操作是通过追加数据来间接实现，也就是说更新最终转换为追加一个新的数据。只是在读取的时候，会从 Level0 层的 SSTable 文件开始查找数据，数据在低层的 SSTable 文件中必然比高层的文件中要新，所以总能读取到最新的那条数据。也就是说此时在整个 LSM Tree 中可能会同时存在多个 key 值相同的数据，只有在之后合并 SSTable 文件的时候，才会将旧的值删除。</p>
+<h3 id="LSM-Tree-数据删除过程"><a href="#LSM-Tree-数据删除过程" class="headerlink" title="LSM-Tree 数据删除过程"></a>LSM-Tree 数据删除过程</h3><p>LSM-Tree 存储引擎的对数据的删除过程与追加数据的过程基本一样，区别在于追加数据的时候，是有具体的数据值的，而删除的时候，追加的数据值是删除标记。同样在读取的时候，会从 Level0 层的 SSTable 文件开始查找数据，数据在低层的 SSTable 文件中必然比高层的文件中要新，所以如果有删除操作，那么一定会最先读到带删除标记的那条数据。后期合并 SSTable 文件的时候，才会把数据删除。</p>
+<p><strong>B+Tree VS LSM-Tree</strong><br>传统关系型数据采用的底层数据结构是B+树，那么同样是面向磁盘存储的数据结构LSM-Tree相比B+树有什么异同之处呢？</p>
+<p>LSM-Tree的设计思路是，将数据拆分为几百M大小的Segments，并是顺序写入。</p>
+<p>B+Tree则是将数据拆分为固定大小的Block或Page, 一般是4KB大小，和磁盘一个扇区的大小对应，Page是读写的最小单位。</p>
+<p>在数据的更新和删除方面，B+Tree可以做到原地更新和删除，这种方式对数据库事务支持更加友好，因为一个key只会出现一个Page页里面，但由于LSM-Tree只能追加写，并且在L0层key的rang会重叠，所以对事务支持较弱，只能在Segment Compaction的时候进行真正地更新和删除。</p>
+<p>因此LSM-Tree的优点是支持高吞吐的写（可认为是O（1）），这个特点在分布式系统上更为看重，当然针对读取普通的LSM-Tree结构，读取是O（N）的复杂度，在使用索引或者缓存优化后的也可以达到O（logN）的复杂度。</p>
+<p>而B+tree的优点是支持高效的读（稳定的OlogN），但是在大规模的写请求下（复杂度O(LogN)），效率会变得比较低，因为随着insert的操作，为了维护B+树结构，节点会不断的分裂和合并。操作磁盘的随机读写概率会变大，故导致性能降低。</p>
+<p>还有一点需要提到的是基于LSM-Tree分层存储能够做到写的高吞吐，带来的副作用是整个系统必须频繁的进行compaction，写入量越大，Compaction的过程越频繁。而compaction是一个compare &amp; merge的过程，非常消耗CPU和存储IO，在高吞吐的写入情形下，大量的compaction操作占用大量系统资源，必然带来整个系统性能断崖式下跌，对应用系统产生巨大影响，当然我们可以禁用自动Major Compaction，在每天系统低峰期定期触发合并，来避免这个问题。</p>
+<p>阿里为了优化这个问题，在X-DB引入了异构硬件设备FPGA来代替CPU完成compaction操作，使系统整体性能维持在高水位并避免抖动，是存储引擎得以服务业务苛刻要求的关键。</p>
+<h3 id="LSM-Tree的用武之地"><a href="#LSM-Tree的用武之地" class="headerlink" title="LSM Tree的用武之地"></a>LSM Tree的用武之地</h3><p> elasticsearch搜索引擎中有用到LSM-Tree<br> clickHouse中有用到LSM-Tree</p>
+<p>总结<br>  本文主要介绍了LSM-Tree的相关内容，简单的说，其牺牲了部分读取的性能，通过批量顺序写来换取了高吞吐的写性能，这种特性在大数据领域得到充分了体现，最直接的例子就各种NoSQL在大数据领域的应用，学习和了解LSM-Tree的结构将有助于我们更加深入的去理解相关NoSQL数据库的实现原理，掌握隐藏在这些框架下面的核心知识。</p>
+<hr>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/star1210644725/article/details/120384972">https://blog.csdn.net/star1210644725/article/details/120384972</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Alix</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/">http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">石银的小酒屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">数据结构</a></div><div class="post_share"><div class="social-share" data-image="https://alixjc.gitee.io/my-pages/blogImage/dataStructure.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/"><img class="next-cover" src="https://alixjc.gitee.io/my-pages/AI/OpenAI.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">使用Vercel托管平台搭建免费Chatgpt网站</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://alixjc.gitee.io/my-pages/animation/touxiang.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Alix</div><div class="author-info__description">归途也还可爱</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">27</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">10</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/923584731"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/923584731" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:923584731@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">大鹏一日同风起,扶摇直上九万里</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81B%E6%A0%91%E5%92%8CB-%E6%A0%91"><span class="toc-number">1.</span> <span class="toc-text">一、B树和B+树</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#B%E6%A0%91"><span class="toc-number">1.1.</span> <span class="toc-text">B树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E6%A0%91%E7%89%B9%E6%80%A7"><span class="toc-number">1.1.1.</span> <span class="toc-text">B树特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81B%E6%A0%91"><span class="toc-number">1.1.2.</span> <span class="toc-text">为什么要B树</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E6%A0%91%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="toc-number">1.1.3.</span> <span class="toc-text">B树的操作</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8F%92%E5%85%A5"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">插入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">删除</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#B-%E6%A0%91"><span class="toc-number">1.2.</span> <span class="toc-text">B+树</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E6%A0%91%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%80%A7%E8%B4%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">B+树的基本性质</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.2.2.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E6%A0%91%E5%92%8CB-%E6%A0%91%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">1.2.3.</span> <span class="toc-text">B树和B+树的区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B-%E6%A0%91%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">1.2.4.</span> <span class="toc-text">B+树的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E6%A0%91%E7%9A%84%E4%BC%98%E5%8A%BF"><span class="toc-number">1.2.5.</span> <span class="toc-text">B树的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E8%80%85%E7%9A%84%E7%BB%86%E8%8A%82%E5%AF%B9%E6%AF%94"><span class="toc-number">1.2.6.</span> <span class="toc-text">两者的细节对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#B%E6%A0%91%E4%B8%8EB-%E6%A0%91%E5%9C%A8%E5%AE%9E%E9%99%85%E4%BB%A3%E7%A0%81%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="toc-number">1.2.7.</span> <span class="toc-text">B树与B+树在实际代码中的应用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%97%B6%E9%97%B4%E8%BD%AE"><span class="toc-number">2.</span> <span class="toc-text">二、时间轮</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%AF%B4%E8%B5%B7"><span class="toc-number">2.1.</span> <span class="toc-text">从定时任务说起</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E8%AF%86%E6%97%B6%E9%97%B4%E8%BD%AE"><span class="toc-number">2.2.</span> <span class="toc-text">初识时间轮</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E6%97%B6%E9%97%B4%E5%92%8C%E7%9B%B8%E5%AF%B9%E6%97%B6%E9%97%B4"><span class="toc-number">2.2.1.</span> <span class="toc-text">绝对时间和相对时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E8%BD%AE%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84"><span class="toc-number">2.2.2.</span> <span class="toc-text">时间轮的数据结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E5%88%BB%E5%BA%A6%E4%B8%8D%E5%A4%9F%E7%94%A8%E6%80%8E%E4%B9%88%E5%8A%9E%EF%BC%9F"><span class="toc-number">2.2.3.</span> <span class="toc-text">时间刻度不够用怎么办？</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A2%9E%E5%A4%A7%E6%97%B6%E9%97%B4%E8%BD%AE%E7%9A%84%E5%88%BB%E5%BA%A6"><span class="toc-number">2.2.3.1.</span> <span class="toc-text">增大时间轮的刻度</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#round-%E7%9A%84%E6%97%B6%E9%97%B4%E8%BD%AE%E7%AE%97%E6%B3%95"><span class="toc-number">2.3.</span> <span class="toc-text">round 的时间轮算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E5%B1%82%E6%97%B6%E9%97%B4%E8%BD%AE%E7%AE%97%E6%B3%95"><span class="toc-number">2.4.</span> <span class="toc-text">分层时间轮算法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E8%BD%AE%E7%AE%97%E6%B3%95%E7%9A%84%E8%BF%9B%E4%B8%80%E6%AD%A5%E4%BC%98%E5%8C%96"><span class="toc-number">2.5.</span> <span class="toc-text">时间轮算法的进一步优化</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90"><span class="toc-number">2.6.</span> <span class="toc-text">性能分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%9A%E7%BA%A7%E6%97%B6%E9%97%B4%E8%BD%AE%E7%AE%97%E6%B3%95%E7%9A%84%E7%AE%80%E5%8D%95%E5%AE%9E%E7%8E%B0"><span class="toc-number">2.7.</span> <span class="toc-text">多级时间轮算法的简单实现</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%B7%B3%E8%A1%A8"><span class="toc-number">3.</span> <span class="toc-text">三、跳表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="toc-number">3.1.</span> <span class="toc-text">一、跳表的定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%B7%B3%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%9B%BE%E5%9E%8B"><span class="toc-number">3.2.</span> <span class="toc-text">二、跳表的数据结构图型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B7%B3%E8%A1%A8%E7%9A%84%E6%BC%94%E5%8C%96%E8%BF%87%E7%A8%8B"><span class="toc-number">3.2.1.</span> <span class="toc-text">跳表的演化过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%8E%E5%8D%95%E9%93%BE%E8%A1%A8%E5%BC%80%E5%A7%8B%E8%AF%B4%E8%B5%B7"><span class="toc-number">3.2.2.</span> <span class="toc-text">从单链表开始说起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%A5%E6%89%BE%E7%9A%84%E6%97%B6%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">3.2.3.</span> <span class="toc-text">查找的时间复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A9%BA%E9%97%B4%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-number">3.2.4.</span> <span class="toc-text">空间复杂度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%B7%B3%E8%A1%A8%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">3.3.</span> <span class="toc-text">三、跳表插入数据</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E6%8F%92%E5%85%A5%E8%BF%87%E7%A8%8B"><span class="toc-number">3.3.1.</span> <span class="toc-text">整体插入过程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E8%B7%B3%E8%A1%A8%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">3.4.</span> <span class="toc-text">四、跳表删除数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E6%80%BB%E7%BB%93"><span class="toc-number">3.5.</span> <span class="toc-text">五、总结</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81Java%E5%AE%9E%E7%8E%B0%E8%B7%B3%E8%A1%A8"><span class="toc-number">3.6.</span> <span class="toc-text">六、Java实现跳表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B7%A5%E4%B8%9A%E4%B8%8A%E5%85%B6%E4%BB%96%E4%BD%BF%E7%94%A8%E8%B7%B3%E8%A1%A8%E7%9A%84%E5%9C%BA%E6%99%AF"><span class="toc-number">3.6.1.</span> <span class="toc-text">工业上其他使用跳表的场景</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81LSM-Tree"><span class="toc-number">4.</span> <span class="toc-text">四、LSM-Tree</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFLSM-Tree"><span class="toc-number">4.0.1.</span> <span class="toc-text">什么是LSM-Tree</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree-%E5%90%88%E5%B9%B6%E6%80%9D%E6%83%B3"><span class="toc-number">4.0.2.</span> <span class="toc-text">LSM-Tree 合并思想</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree-WAL"><span class="toc-number">4.0.3.</span> <span class="toc-text">LSM-Tree WAL</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SSTable-%E5%92%8C-LSM-Tree"><span class="toc-number">4.0.4.</span> <span class="toc-text">SSTable 和 LSM-Tree</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8ELSM-Tree%E7%9A%84%E8%AF%BB%E5%86%99%E5%8E%9F%E7%90%86"><span class="toc-number">4.1.</span> <span class="toc-text">关于LSM-Tree的读写原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree%E5%86%99%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">4.1.1.</span> <span class="toc-text">LSM-Tree写数据的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree%E8%AF%BB%E6%95%B0%E6%8D%AE%E7%9A%84%E8%BF%87%E7%A8%8B"><span class="toc-number">4.1.2.</span> <span class="toc-text">LSM-Tree读数据的过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree-%E6%95%B0%E6%8D%AE%E4%BF%AE%E6%94%B9%E8%BF%87%E7%A8%8B"><span class="toc-number">4.1.3.</span> <span class="toc-text">LSM-Tree 数据修改过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree-%E6%95%B0%E6%8D%AE%E5%88%A0%E9%99%A4%E8%BF%87%E7%A8%8B"><span class="toc-number">4.1.4.</span> <span class="toc-text">LSM-Tree 数据删除过程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#LSM-Tree%E7%9A%84%E7%94%A8%E6%AD%A6%E4%B9%8B%E5%9C%B0"><span class="toc-number">4.1.5.</span> <span class="toc-text">LSM Tree的用武之地</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/" title="后端开发四种层式结构"><img src="https://alixjc.gitee.io/my-pages/blogImage/dataStructure.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="后端开发四种层式结构"/></a><div class="content"><a class="title" href="/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/" title="后端开发四种层式结构">后端开发四种层式结构</a><time datetime="2023-05-08T08:24:08.369Z" title="发表于 2023-05-08 16:24:08">2023-05-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/" title="使用Vercel托管平台搭建免费Chatgpt网站"><img src="https://alixjc.gitee.io/my-pages/AI/OpenAI.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="使用Vercel托管平台搭建免费Chatgpt网站"/></a><div class="content"><a class="title" href="/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/" title="使用Vercel托管平台搭建免费Chatgpt网站">使用Vercel托管平台搭建免费Chatgpt网站</a><time datetime="2023-05-04T07:06:57.041Z" title="发表于 2023-05-04 15:06:57">2023-05-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/" title="Midjourney 新手快速起步指南"><img src="https://alixjc.gitee.io/my-pages/AI/Midjoruney.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Midjourney 新手快速起步指南"/></a><div class="content"><a class="title" href="/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/" title="Midjourney 新手快速起步指南">Midjourney 新手快速起步指南</a><time datetime="2023-04-28T02:59:05.546Z" title="发表于 2023-04-28 10:59:05">2023-04-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/" title="OpenAI回答问题"><img src="https://alixjc.gitee.io/my-pages/AI/OpenAI.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="OpenAI回答问题"/></a><div class="content"><a class="title" href="/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/" title="OpenAI回答问题">OpenAI回答问题</a><time datetime="2023-04-27T01:52:51.855Z" title="发表于 2023-04-27 09:52:51">2023-04-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/04/20/%E9%94%81%E6%9C%BA%E5%88%B6/" title="数据库并发锁机制"><img src="/assetse/y17.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据库并发锁机制"/></a><div class="content"><a class="title" href="/2023/04/20/%E9%94%81%E6%9C%BA%E5%88%B6/" title="数据库并发锁机制">数据库并发锁机制</a><time datetime="2023-04-20T06:55:04.000Z" title="发表于 2023-04-20 14:55:04">2023-04-20</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Alix</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/'
+    this.page.identifier = '/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/'
+    this.page.title = '后端开发四种层式结构'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="你好,大帅哥,大美女" data-fontsize="15px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20,"vOffset":-20},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
