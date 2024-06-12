@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-05-08T08:50:26.187Z</updated>
+  <updated>2024-06-12T07:05:09.499Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,25 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Map+函数式接口</title>
+    <link href="http://example.com/2024/06/12/Design_Pattern/Map+%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E8%A7%A3%E5%86%B3if-else/"/>
+    <id>http://example.com/2024/06/12/Design_Pattern/Map+%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E8%A7%A3%E5%86%B3if-else/</id>
+    <published>2024-06-12T03:00:40.649Z</published>
+    <updated>2024-06-12T07:05:09.499Z</updated>
+    
+    
+    <summary type="html">设计模式</summary>
+    
+    
+    
+    <category term="设计模式" scheme="http://example.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+    <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>后端开发四种层式结构</title>
@@ -424,31 +443,6 @@
     <id>http://example.com/2022/10/10/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[2]/</id>
     <published>2022-10-10T14:13:58.000Z</published>
     <updated>2023-04-25T00:15:00.095Z</updated>
-    
-    
-    <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
-    
-    
-    
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/tags/%E5%8E%9F%E7%90%86/"/>
-    
-    <category term="源码" scheme="http://example.com/tags/%E6%BA%90%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发体系-第三阶段-JUC并发包-[1]</title>
-    <link href="http://example.com/2022/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/"/>
-    <id>http://example.com/2022/10/09/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E4%B8%89%E9%98%B6%E6%AE%B5-JUC%E5%B9%B6%E5%8F%91%E5%8C%85-[1]/</id>
-    <published>2022-10-09T14:13:58.000Z</published>
-    <updated>2023-04-25T00:15:04.535Z</updated>
     
     
     <summary type="html">万字系列长文讲解-Java并发体系-第三阶段-JUC并发包。JUC在高并发编程中使用频率非常高，这里会详细介绍其用法。</summary>
