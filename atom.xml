@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-12T07:35:23.568Z</updated>
+  <updated>2024-06-13T08:23:38.813Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,14 +17,14 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>设计模式笔记</title>
-    <link href="http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
-    <published>2024-06-12T14:09:58.000Z</published>
-    <updated>2024-06-12T07:35:23.568Z</updated>
+    <title>工作常用设计模式</title>
+    <link href="http://example.com/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
+    <published>2024-06-13T08:35:57.943Z</published>
+    <updated>2024-06-13T08:23:38.813Z</updated>
     
     
-    <summary type="html">设计模式笔记</summary>
+    <summary type="html">工作常用设计模式</summary>
     
     
     
@@ -33,23 +33,23 @@
     
     <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
+    <category term="java" scheme="http://example.com/tags/java/"/>
+    
   </entry>
   
   <entry>
-    <title>Map+函数式接口</title>
-    <link href="http://example.com/2024/06/12/Design_Pattern/Map+%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E8%A7%A3%E5%86%B3if-else/"/>
-    <id>http://example.com/2024/06/12/Design_Pattern/Map+%E5%87%BD%E6%95%B0%E5%BC%8F%E6%8E%A5%E5%8F%A3%E8%A7%A3%E5%86%B3if-else/</id>
+    <title>设计模式笔记</title>
+    <link href="http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2024-06-12T14:09:58.000Z</published>
-    <updated>2024-06-12T07:27:56.551Z</updated>
+    <updated>2024-06-13T08:35:27.161Z</updated>
     
     
-    <summary type="html">Map+函数式接口</summary>
+    <summary type="html">设计模式笔记</summary>
     
     
     
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="设计模式" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    <category term="设计模式" scheme="http://example.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
     
     <category term="设计模式" scheme="http://example.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
