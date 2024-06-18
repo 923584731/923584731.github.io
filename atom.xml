@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-06-13T08:23:38.813Z</updated>
+  <updated>2024-06-18T02:17:09.453Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://example.com/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2024-06-13T08:35:57.943Z</published>
-    <updated>2024-06-13T08:23:38.813Z</updated>
+    <updated>2024-06-18T02:17:09.453Z</updated>
     
     
     <summary type="html">工作常用设计模式</summary>
@@ -42,7 +42,7 @@
     <link href="http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     <id>http://example.com/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</id>
     <published>2024-06-12T14:09:58.000Z</published>
-    <updated>2024-06-13T08:35:27.161Z</updated>
+    <updated>2024-06-18T02:17:06.026Z</updated>
     
     
     <summary type="html">设计模式笔记</summary>
@@ -61,7 +61,7 @@
     <link href="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/"/>
     <id>http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/</id>
     <published>2023-05-08T08:24:08.369Z</published>
-    <updated>2023-05-08T08:50:26.187Z</updated>
+    <updated>2024-06-18T02:16:07.706Z</updated>
     
     
     <summary type="html">数据结构</summary>
@@ -76,11 +76,11 @@
   </entry>
   
   <entry>
-    <title>使用Vercel托管平台搭建免费Chatgpt网站</title>
+    <title>ChatGPT-免费部署</title>
     <link href="http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/"/>
     <id>http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/</id>
     <published>2023-05-04T07:06:57.041Z</published>
-    <updated>2023-05-04T07:14:18.103Z</updated>
+    <updated>2024-06-18T02:27:31.410Z</updated>
     
     
     <summary type="html">这是一篇chatGPT搭建教学</summary>
@@ -92,8 +92,6 @@
     
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
     
-    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
-    
   </entry>
   
   <entry>
@@ -101,7 +99,7 @@
     <link href="http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"/>
     <id>http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</id>
     <published>2023-04-28T02:59:05.546Z</published>
-    <updated>2023-05-08T08:49:58.375Z</updated>
+    <updated>2024-06-18T02:27:38.115Z</updated>
     
     
     <summary type="html">Midjourney</summary>
@@ -113,16 +111,14 @@
     
     <category term="Midjourney" scheme="http://example.com/tags/Midjourney/"/>
     
-    <category term="AI" scheme="http://example.com/tags/AI/"/>
-    
   </entry>
   
   <entry>
-    <title>OpenAI回答问题</title>
+    <title>ChatGPT-接口调用</title>
     <link href="http://example.com/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/"/>
     <id>http://example.com/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/</id>
     <published>2023-04-27T01:52:51.855Z</published>
-    <updated>2023-04-28T02:22:19.462Z</updated>
+    <updated>2024-06-18T02:27:34.790Z</updated>
     
     
     <summary type="html">关于chatGPT的学习</summary>
@@ -133,8 +129,6 @@
     
     
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
-    
-    <category term="OpenAI" scheme="http://example.com/tags/OpenAI/"/>
     
   </entry>
   
@@ -156,6 +150,44 @@
     <category term="技术记录" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
     
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-常用操作</title>
+    <link href="http://example.com/2023/03/27/LinuxFile/Linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://example.com/2023/03/27/LinuxFile/Linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2023-03-27T04:45:37.000Z</published>
+    <updated>2023-03-27T04:45:37.000Z</updated>
+    
+    
+    <summary type="html">关于Linux的学习</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-基础命令</title>
+    <link href="http://example.com/2023/03/26/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
+    <id>http://example.com/2023/03/26/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</id>
+    <published>2023-03-26T01:45:37.000Z</published>
+    <updated>2023-03-26T01:45:37.000Z</updated>
+    
+    
+    <summary type="html">关于Linux的学习</summary>
+    
+    
+    
+    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
+    
+    
+    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
   </entry>
   
@@ -409,52 +441,6 @@
     <category term="JVM" scheme="http://example.com/tags/JVM/"/>
     
     <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列-第1章-JVM与Java体系结构</title>
-    <link href="http://example.com/2022/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC1%E7%AB%A0-JVM%E4%B8%8EJava%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2022/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC1%E7%AB%A0-JVM%E4%B8%8EJava%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/</id>
-    <published>2022-11-02T03:51:56.000Z</published>
-    <updated>2023-05-04T03:10:38.677Z</updated>
-    
-    
-    <summary type="html">JVM系列-第1章-JVM与Java体系结构。</summary>
-    
-    
-    
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
-    
-    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
-    
-    
-    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
-    
-    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Java并发体系-第四阶段-AQS源码解读-[1]</title>
-    <link href="http://example.com/2022/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/"/>
-    <id>http://example.com/2022/10/26/java_concurrency/Java%E5%B9%B6%E5%8F%91%E4%BD%93%E7%B3%BB-%E7%AC%AC%E5%9B%9B%E9%98%B6%E6%AE%B5-AQS%E6%BA%90%E7%A0%81%E8%A7%A3%E8%AF%BB-[1]/</id>
-    <published>2022-10-26T09:59:42.000Z</published>
-    <updated>2023-04-25T00:14:55.106Z</updated>
-    
-    
-    <summary type="html">万字系列长文讲解-Java并发体系-第四阶段-AQS源码解读-[1]。</summary>
-    
-    
-    
-    <category term="Java并发" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="原理" scheme="http://example.com/categories/Java%E5%B9%B6%E5%8F%91/%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="Java并发" scheme="http://example.com/tags/Java%E5%B9%B6%E5%8F%91/"/>
-    
-    <category term="AQS源码" scheme="http://example.com/tags/AQS%E6%BA%90%E7%A0%81/"/>
     
   </entry>
   
