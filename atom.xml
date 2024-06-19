@@ -57,49 +57,106 @@
   </entry>
   
   <entry>
-    <title>后端开发四种层式结构</title>
-    <link href="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/"/>
-    <id>http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/</id>
-    <published>2023-05-08T08:24:08.369Z</published>
-    <updated>2024-06-18T02:16:07.706Z</updated>
+    <title>shell-实用脚本1</title>
+    <link href="http://example.com/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/"/>
+    <id>http://example.com/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/</id>
+    <published>2024-03-03T03:51:56.000Z</published>
+    <updated>2024-06-19T04:36:49.478Z</updated>
     
     
-    <summary type="html">数据结构</summary>
+    <summary type="html">超级实用的shell脚本100例（一）</summary>
     
     
     
-    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="Shell" scheme="http://example.com/categories/Shell/"/>
     
     
-    <category term="数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <category term="Shell" scheme="http://example.com/tags/Shell/"/>
     
   </entry>
   
   <entry>
-    <title>ChatGPT-免费部署</title>
-    <link href="http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/"/>
-    <id>http://example.com/2023/05/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/</id>
-    <published>2023-05-04T07:06:57.041Z</published>
-    <updated>2024-06-18T02:27:31.410Z</updated>
+    <title>Shell-基本操作</title>
+    <link href="http://example.com/2024/03/03/LinuxFile/Shell/"/>
+    <id>http://example.com/2024/03/03/LinuxFile/Shell/</id>
+    <published>2024-03-03T03:51:56.000Z</published>
+    <updated>2024-06-19T04:31:57.772Z</updated>
     
     
-    <summary type="html">这是一篇chatGPT搭建教学</summary>
+    <summary type="html">Shell-基本操作</summary>
     
     
     
-    <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
+    <category term="Shell" scheme="http://example.com/categories/Shell/"/>
     
     
-    <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    <category term="Shell" scheme="http://example.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>shell-实用脚本2</title>
+    <link href="http://example.com/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+    <id>http://example.com/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+    <published>2024-03-03T03:51:56.000Z</published>
+    <updated>2024-06-19T04:31:53.144Z</updated>
+    
+    
+    <summary type="html">超级实用的shell脚本100例（二）</summary>
+    
+    
+    
+    <category term="Shell" scheme="http://example.com/categories/Shell/"/>
+    
+    
+    <category term="Shell" scheme="http://example.com/tags/Shell/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令总结(2)</title>
+    <link href="http://example.com/2024/03/02/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93(2)/"/>
+    <id>http://example.com/2024/03/02/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93(2)/</id>
+    <published>2024-03-02T03:51:56.000Z</published>
+    <updated>2024-06-19T04:46:27.204Z</updated>
+    
+    
+    <summary type="html">Linux基本操作命令。</summary>
+    
+    
+    
+    <category term="Linux命令" scheme="http://example.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux命令总结(1)</title>
+    <link href="http://example.com/2024/03/02/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93(1)/"/>
+    <id>http://example.com/2024/03/02/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93(1)/</id>
+    <published>2024-03-02T03:51:56.000Z</published>
+    <updated>2024-06-19T04:43:47.696Z</updated>
+    
+    
+    <summary type="html">Linux基本操作命令。</summary>
+    
+    
+    
+    <category term="Linux命令" scheme="http://example.com/categories/Linux%E5%91%BD%E4%BB%A4/"/>
+    
+    
+    <category term="Linux命令" scheme="http://example.com/tags/Linux%E5%91%BD%E4%BB%A4/"/>
     
   </entry>
   
   <entry>
     <title>Midjourney 新手快速起步指南</title>
-    <link href="http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"/>
-    <id>http://example.com/2023/04/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</id>
-    <published>2023-04-28T02:59:05.546Z</published>
-    <updated>2024-06-18T02:27:38.115Z</updated>
+    <link href="http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"/>
+    <id>http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</id>
+    <published>2023-12-28T02:37:09.000Z</published>
+    <updated>2023-12-28T02:37:09.000Z</updated>
     
     
     <summary type="html">Midjourney</summary>
@@ -115,10 +172,10 @@
   
   <entry>
     <title>ChatGPT-接口调用</title>
-    <link href="http://example.com/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/"/>
-    <id>http://example.com/2023/04/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/</id>
-    <published>2023-04-27T01:52:51.855Z</published>
-    <updated>2024-06-18T02:27:34.790Z</updated>
+    <link href="http://example.com/2023/11/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/"/>
+    <id>http://example.com/2023/11/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/</id>
+    <published>2023-11-27T01:45:37.000Z</published>
+    <updated>2023-11-27T01:45:37.000Z</updated>
     
     
     <summary type="html">关于chatGPT的学习</summary>
@@ -129,6 +186,44 @@
     
     
     <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ChatGPT-免费部署</title>
+    <link href="http://example.com/2023/11/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/"/>
+    <id>http://example.com/2023/11/04/AI/%E4%BD%BF%E7%94%A8Vercel%E6%89%98%E7%AE%A1%E5%B9%B3%E5%8F%B0%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9Chatgpt%E7%BD%91%E7%AB%99/</id>
+    <published>2023-11-04T07:05:01.000Z</published>
+    <updated>2023-11-04T07:05:01.000Z</updated>
+    
+    
+    <summary type="html">这是一篇chatGPT搭建教学</summary>
+    
+    
+    
+    <category term="chatGPT" scheme="http://example.com/categories/chatGPT/"/>
+    
+    
+    <category term="chatGPT" scheme="http://example.com/tags/chatGPT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>后端开发四种层式结构</title>
+    <link href="http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/"/>
+    <id>http://example.com/2023/05/08/data_structure/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E5%9B%9B%E7%A7%8D%E5%B1%82%E5%BC%8F%E7%BB%93%E6%9E%84/</id>
+    <published>2023-05-08T08:24:08.369Z</published>
+    <updated>2024-06-18T02:16:07.706Z</updated>
+    
+    
+    <summary type="html">数据结构</summary>
+    
+    
+    
+    <category term="数据结构" scheme="http://example.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+    <category term="数据结构" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
@@ -150,44 +245,6 @@
     <category term="技术记录" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF%E8%AE%B0%E5%BD%95/"/>
     
     <category term="随笔" scheme="http://example.com/tags/%E9%9A%8F%E7%AC%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-常用操作</title>
-    <link href="http://example.com/2023/03/27/LinuxFile/Linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    <id>http://example.com/2023/03/27/LinuxFile/Linux%20%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
-    <published>2023-03-27T04:45:37.000Z</published>
-    <updated>2023-03-27T04:45:37.000Z</updated>
-    
-    
-    <summary type="html">关于Linux的学习</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux-基础命令</title>
-    <link href="http://example.com/2023/03/26/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/"/>
-    <id>http://example.com/2023/03/26/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93/</id>
-    <published>2023-03-26T01:45:37.000Z</published>
-    <updated>2023-03-26T01:45:37.000Z</updated>
-    
-    
-    <summary type="html">关于Linux的学习</summary>
-    
-    
-    
-    <category term="Linux" scheme="http://example.com/categories/Linux/"/>
-    
-    
-    <category term="Linux" scheme="http://example.com/tags/Linux/"/>
     
   </entry>
   
@@ -361,75 +418,6 @@
     
     
     <summary type="html">JVM系列-第5章-堆。</summary>
-    
-    
-    
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
-    
-    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
-    
-    
-    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
-    
-    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列-第4章-虚拟机栈</title>
-    <link href="http://example.com/2022/11/10/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC4%E7%AB%A0-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88/"/>
-    <id>http://example.com/2022/11/10/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC4%E7%AB%A0-%E8%99%9A%E6%8B%9F%E6%9C%BA%E6%A0%88/</id>
-    <published>2022-11-10T02:38:42.000Z</published>
-    <updated>2023-05-04T03:11:30.107Z</updated>
-    
-    
-    <summary type="html">JVM系列-第4章-虚拟机栈。</summary>
-    
-    
-    
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
-    
-    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
-    
-    
-    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
-    
-    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列-第3章-运行时数据区</title>
-    <link href="http://example.com/2022/11/09/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC3%E7%AB%A0-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/"/>
-    <id>http://example.com/2022/11/09/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC3%E7%AB%A0-%E8%BF%90%E8%A1%8C%E6%97%B6%E6%95%B0%E6%8D%AE%E5%8C%BA/</id>
-    <published>2022-11-09T07:38:42.000Z</published>
-    <updated>2023-05-04T03:10:48.750Z</updated>
-    
-    
-    <summary type="html">JVM系列-第3章-运行时数据区。</summary>
-    
-    
-    
-    <category term="JVM" scheme="http://example.com/categories/JVM/"/>
-    
-    <category term="1.内存与垃圾回收篇" scheme="http://example.com/categories/JVM/1-%E5%86%85%E5%AD%98%E4%B8%8E%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E7%AF%87/"/>
-    
-    
-    <category term="JVM" scheme="http://example.com/tags/JVM/"/>
-    
-    <category term="虚拟机" scheme="http://example.com/tags/%E8%99%9A%E6%8B%9F%E6%9C%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JVM系列-第2章-类加载子系统</title>
-    <link href="http://example.com/2022/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC2%E7%AB%A0-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%AD%90%E7%B3%BB%E7%BB%9F/"/>
-    <id>http://example.com/2022/11/02/JVM/JVM%E7%B3%BB%E5%88%97-%E7%AC%AC2%E7%AB%A0-%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%AD%90%E7%B3%BB%E7%BB%9F/</id>
-    <published>2022-11-02T13:31:58.000Z</published>
-    <updated>2023-05-04T03:10:44.016Z</updated>
-    
-    
-    <summary type="html">JVM系列-第2章-类加载子系统。</summary>
     
     
     

@@ -1,0 +1,420 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Midjourney 新手快速起步指南 | 石银的小酒屋</title><meta name="keywords" content="Midjourney"><meta name="author" content="Alix"><meta name="copyright" content="Alix"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Midjourney">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Midjourney 新手快速起步指南">
+<meta property="og:url" content="http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/index.html">
+<meta property="og:site_name" content="石银的小酒屋">
+<meta property="og:description" content="Midjourney">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjoruney.jpg">
+<meta property="article:published_time" content="2023-12-28T02:37:09.000Z">
+<meta property="article:modified_time" content="2023-12-28T02:37:09.000Z">
+<meta property="article:author" content="Alix">
+<meta property="article:tag" content="Midjourney">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjoruney.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img//touxiang.png"><link rel="canonical" href="http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Midjourney 新手快速起步指南',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-28 10:37:09'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/universe.css"><link rel="stylesheet" href="/self/Kimbiedark.css"><meta name="generator" content="Hexo 6.2.0"><link rel="alternate" href="/atom.xml" title="石银的小酒屋" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img//touxiang.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/playlist/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li><li><a class="site-page child" href="/chatGPT/"><i class="fa-fw fa fa-link"></i><span> GPT</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjoruney.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">石银的小酒屋</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-graduation-cap"></i><span> 博文</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 归档</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 生活</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/photos/"><i class="fa-fw fa fa-camera-retro"></i><span> 相册</span></a></li><li><a class="site-page child" href="/playlist/"><i class="fa-fw fa fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/bangumis/"><i class="fa-fw fas fa-video"></i><span> 番剧</span></a></li><li><a class="site-page child" href="/chatGPT/"><i class="fa-fw fa fa-link"></i><span> GPT</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fa fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于笔者</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Midjourney 新手快速起步指南</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-12-28T02:37:09.000Z" title="发表于 2023-12-28 10:37:09">2023-12-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-12-28T02:37:09.000Z" title="更新于 2023-12-28 10:37:09">2023-12-28</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Midjourney/">Midjourney</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.9k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Midjourney 新手快速起步指南"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>使用 Midjourney 首先需要创建Discord账号，Midjourney和Discord的关系就像小程序和微信的关系一样。<br>国内网络无法直接访问Discord，这就需要你家网络会<strong>“魔法”</strong>（梯子）。</p>
+</blockquote>
+<h1 id="Midjourney是什么？"><a href="#Midjourney是什么？" class="headerlink" title="Midjourney是什么？"></a>Midjourney是什么？</h1><p>用一句话概括：<strong>用文字描述来生成图像的AI工具</strong>。</p>
+<h1 id="如何快速使用Midjourney生成AI图片"><a href="#如何快速使用Midjourney生成AI图片" class="headerlink" title="如何快速使用Midjourney生成AI图片"></a>如何快速使用Midjourney生成AI图片</h1><h2 id="Step1-下载注册"><a href="#Step1-下载注册" class="headerlink" title="Step1: 下载注册"></a>Step1: 下载注册</h2><p>不下载也没有关系，通过Midjourney进去也会需要你进行<br><a href="https://link.zhihu.com/?target=https://discord.com/">Discord</a></p>
+<ul>
+<li>Midjouney 没有自己的客户端，搭载在Discord上，所以需要注册使用 Discord</li>
+<li>Discord 简单来说，是个供社区玩家交流的地方，号称为”永远在线的聊天室“。更多信息查看：**<a href="https://link.zhihu.com/?target=https://zh.wikipedia.org/wiki/Discord">Here</a>**</li>
+<li>下载链接： <a href="https://link.zhihu.com/?target=https://discord.com/download">https://discord.com/download</a></li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjourney1.png">
+
+
+<h2 id="Step2-加入Midjourney"><a href="#Step2-加入Midjourney" class="headerlink" title="Step2: 加入Midjourney"></a>Step2: 加入Midjourney</h2><ul>
+<li>进入 <a href="https://link.zhihu.com/?target=http://www.midjourney.com/">www.midjourney.com</a> 网页，选择 join the Beta</li>
+<li>或者直接进入 <strong><a href="https://link.zhihu.com/?target=https://discord.com/invite/midjourney">Midjourney Discord</a></strong></li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjourney2.png">
+
+
+<img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjourney3.png">
+## Step3: 加入新手频道
+
+<p>左侧栏找到 newbies-# channel<br><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjourney4.png"></p>
+<h2 id="Step4-如何快速生成demo图片"><a href="#Step4-如何快速生成demo图片" class="headerlink" title="Step4: 如何快速生成demo图片"></a>Step4: 如何快速生成demo图片</h2><p>在对话框中输入 <strong>&#x2F;imagine</strong>，在<strong>prompt</strong>中输入英文描述</p>
+<h2 id="Step5-如何进一步升级图片"><a href="#Step5-如何进一步升级图片" class="headerlink" title="Step5: 如何进一步升级图片"></a>Step5: 如何进一步升级图片</h2><ul>
+<li>每次会基于prompt中的文字描述生成4张不同图片，但都不会是高清，可以理解为一个demo，以一种低成本地方式让你判断有没有合适的，然后再进一步做升级操作</li>
+<li>1、2、3、4对应着上面的四张图：从左至右，从上至下</li>
+<li>U1-4：选择其中一张来进行放大细节，V1-4：选择其中一张，基于这张来进行细微的变化，其中生成的新图会与所选的这张整个体风格以及构图相似。</li>
+<li>如果不满意，可以选择最右边的刷新重新开始</li>
+</ul>
+<img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjourney11.png">
+如上图所示，这一组图片下面出现了类似`u1`,`v1`的东西，这里解释一下这几个按钮的意思。 u = upscale, 后面的数字代表第几张图。那么`u1`的意思翻译一下就是，我觉得第一张图还不错，那么给我生成大图吧。 v = refine, 后面的数字同样代表第几张图， 那么`v1`的意思就是，我感觉第一张图还不错，你就按照第一张图的样子再给我生成4张差不多的吧. 第一行最右侧一看就知道是刷新按钮的按钮，点击之后会根据刚才的prompt重新生成一组图片。 当我们点击 u1 之后，midjourney 就会把第一张图做成一张高分辨率的图，结果如下。
+
+<h3 id="方式一-文字描述"><a href="#方式一-文字描述" class="headerlink" title="方式一:文字描述"></a>方式一:文字描述</h3><p>框架&#x3D;主题内容+环境背景+构图镜头+参考方向+图像设定<br>主题内容 告诉AI画的内容，比如猫咪、摩托车、建筑等<br>环境背景 氛围、场景、光感等 (有详细拆解表)<br>构图镜头 景深、物体位置等 (有详细拆解表)<br>参考方向 艺术家名字、风格 (有详细拆解表)<br>图像设定 看关键词后缀 (尺寸、图像质量、比例等)</p>
+<h3 id="方式二-图片参考-文字描述"><a href="#方式二-图片参考-文字描述" class="headerlink" title="方式二:图片参考+文字描述"></a>方式二:图片参考+文字描述</h3><p>操作思路<br>先发送一张图片回车-再右键复制图片地址-输入&#x2F;imagine+图片链接(比如两张&#x2F;三张，中间要用空格隔开)+空格+关键词回车<br>在网站</p>
+<h3 id="方式三-图片-图片"><a href="#方式三-图片-图片" class="headerlink" title="方式三:图片+图片"></a>方式三:图片+图片</h3><p>操作思路<br>输入&#x2F;blend-回车-上传图浏览器中打开(建议物体+背景结合，这样合成照片即有前面参考的结构又有后面的色调效果，图片建议png&amp;jpg模式)</p>
+<p>关键词生网站</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> Public Prompts 【编写智能 Al绘画关键词的在线生成工具，提供多种 Al绘画工具的关键词文本描述模板。除了有多种风格还有对应风格的模型库】  </span><br><span class="line"></span><br><span class="line"> Prompt Hunt【多种 Al 艺术画作风格，支持不同类型风格按类别搜素，可以直接选择意向图片，查看关键词】  </span><br><span class="line"></span><br><span class="line">KREA.ai【数百万张 Al 生成画作实例，同样支持关键词检索功能。还提供收藏点赞分组功能，方便用户后期自己查看喜欢的作品目前已经开源】  </span><br><span class="line"></span><br><span class="line">Lexica【在搜素框输入简单的关键词或上传图片，就能为你提供大量风格不同的照片。点击照片就能看到完整的 Al 关键词，点击复制按钮直接提取】  </span><br><span class="line"></span><br><span class="line"> Open Art 【搜索1000万＋提示，通过 Stable Diffusion,DALL.E2生成 Al 艺术和 Al 图像。非常多的图片和关键词参考，如果你没啥灵感，可以参考一下】</span><br></pre></td></tr></table></figure>
+
+<h1 id="Midjourney基础属性"><a href="#Midjourney基础属性" class="headerlink" title="Midjourney基础属性"></a>Midjourney基础属性</h1><h2 id="1-画面尺寸比例"><a href="#1-画面尺寸比例" class="headerlink" title="1.画面尺寸比例:"></a>1.画面尺寸比例:</h2><p>–aspect 1:1 默认纵横比。<br>–aspect 5:4 常见的框架和打印比例<br>–aspect 3:2 印刷摄影中常见。<br>–aspect 7:4 靠近高清电视屏幕和智能手机屏幕。<br>–ar X:X 画面比例，支持1:2&#x2F;3:2&#x2F;16:9 (v3模型下–ar16:9 (1.78) 实际被渲染为7:4 (1.75)，v4模型目前只支持1:1和3:2 (2:3) 若不输入–ar则默认输出图像为1:1的正方形)</p>
+<h2 id="2-模型选择"><a href="#2-模型选择" class="headerlink" title="2.模型选择:"></a>2.模型选择:</h2><p>v5是最新版本[直接打–v5，系统会自动加上style 5b;直接打–v5–stvle 5a另外一种选择风格]。</p>
+<h2 id="3-画面质量"><a href="#3-画面质量" class="headerlink" title="3.画面质量:"></a>3.画面质量:</h2><p>–q.25&#x2F;.5&#x2F;1&#x2F;2四种 数值越大不代表像素越大，数字越大，画面质量大，渲染时间多久。根据自身需求主题选择，突出结构线条可选择q大一些。</p>
+<h2 id="4-风格变化程度"><a href="#4-风格变化程度" class="headerlink" title="4.风格变化程度:"></a>4.风格变化程度:</h2><p>–chaos &lt;0<del>100&gt;,可简写–c&lt;0</del>100&gt; v4模型中，数值越大，风格变化越多;数值越小，风格越统一。主要控制出图的多样性。默认值–chaos0</p>
+<h2 id="5-画面微调"><a href="#5-画面微调" class="headerlink" title="5.画面微调:"></a>5.画面微调:</h2><p>–seed &lt;0~4294967295&gt; 用于微调已经生成的画面，获取相应seed数值后，微调描述词组即可。系统默认值seed是一个随机数值。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/hua1995116/awesome-ai-painting.git">https://github.com/hua1995116/awesome-ai-painting.git</a></p>
+<h3 id="1-midjourney指令教程"><a href="#1-midjourney指令教程" class="headerlink" title="1.midjourney指令教程"></a>1.midjourney指令教程</h3><p>一张图搞定Midjourney指令!</p>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th align="left">指令名称</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>&#x2F;imaqine</td>
+<td align="left">使用提示生成图像</td>
+</tr>
+<tr>
+<td>&#x2F;settings</td>
+<td align="left"><code>查看和调整 Midjourney Bot 的设置</code>初始设置则是的默认参数。MJ version 是MJ的版本(–v),&#x3D;个quality是默认质量(–g ，half是0.5，base是1，high是2)，四个Stvle是风格化等级(–s，low是1250，med是2500，high是5000，very high是20000)upscale是U的模式选择(–uplight)，Public&#x2F;Private mode是公共&#x2F;隐私模式(会员)mode是生成速度</td>
+</tr>
+<tr>
+<td>&#x2F;ask</td>
+<td align="left">获取问题的答案</td>
+</tr>
+<tr>
+<td>&#x2F;imagine</td>
+<td align="left">切换到放松模式</td>
+</tr>
+<tr>
+<td>&#x2F;relax</td>
+<td align="left">切换混音模式</td>
+</tr>
+<tr>
+<td>&#x2F;remix</td>
+<td align="left">切换到快速模式</td>
+</tr>
+<tr>
+<td>&#x2F;fast</td>
+<td align="left">轻松地将两个图像混合在一起</td>
+</tr>
+<tr>
+<td>&#x2F;blend</td>
+<td align="left">切换到两个图像混合模式</td>
+</tr>
+<tr>
+<td>&#x2F;daily_theme</td>
+<td align="left">Midiourney Bot的有用基本信息和提示</td>
+</tr>
+<tr>
+<td>&#x2F;help</td>
+<td align="left">查看有关您的账号以及任何排队或正在运行的作业的信息</td>
+</tr>
+<tr>
+<td>&#x2F;info</td>
+<td align="left">对于专业计划订户:切换到隐身模式</td>
+</tr>
+<tr>
+<td>&#x2F;stealth</td>
+<td align="left">对于专业计划订户:切换到公共模式</td>
+</tr>
+<tr>
+<td>&#x2F;public</td>
+<td align="left">为用户页面生成个人链接</td>
+</tr>
+<tr>
+<td>&#x2F;subscribe</td>
+<td align="left">创建或管理自定义选项</td>
+</tr>
+<tr>
+<td>&#x2F;prefer option</td>
+<td align="left">查看您当前的自定义选项</td>
+</tr>
+<tr>
+<td>&#x2F;prefer option list</td>
+<td align="left">指定要添加到每个提示末尾的后缀</td>
+</tr>
+<tr>
+<td>&#x2F;prefer suffx</td>
+<td align="left">使用图像作业ID在Discord 中重新生成</td>
+</tr>
+<tr>
+<td>&#x2F;show</td>
+<td align="left">使用图像作业ID在Discord 中重新生成</td>
+</tr>
+</tbody></table>
+<h1 id="一些疑问："><a href="#一些疑问：" class="headerlink" title="一些疑问："></a>一些疑问：</h1><h2 id="Midjourney是免费的吗？"><a href="#Midjourney是免费的吗？" class="headerlink" title="Midjourney是免费的吗？"></a>Midjourney是免费的吗？</h2><p>新用户有25张免费试用额度，超过就需要订阅套餐开会员。而且目前访问量很大，可能会受限。</p>
+<blockquote>
+<p>2023-04开始midjourney不再提供免费额度，需要开会员</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Alix</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/">http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">石银的小酒屋</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Midjourney/">Midjourney</a></div><div class="post_share"><div class="social-share" data-image="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Midjoruney.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/03/02/LinuxFile/Linux%20%E5%9F%BA%E7%A1%80%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%80%BB%E7%BB%93(1)/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Linux/Linux.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Linux命令总结(1)</div></div></a></div><div class="next-post pull-right"><a href="/2023/11/27/AI/%E8%B0%83%E7%94%A8OpenAI%E6%8E%A5%E5%8F%A3/"><img class="next-cover" src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/OpenAI.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">ChatGPT-接口调用</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div><div id="comment-switch"><span class="first-comment">Valine</span><span class="switch-btn"></span><span class="second-comment">Disqus</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img//touxiang.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Alix</div><div class="author-info__description">归途也还可爱</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">34</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">13</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/923584731"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/923584731" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:923584731@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="Rss"><i class="fas fa-rss"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">大鹏一日同风起,扶摇直上九万里</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Midjourney%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="toc-number">1.</span> <span class="toc-text">Midjourney是什么？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8Midjourney%E7%94%9F%E6%88%90AI%E5%9B%BE%E7%89%87"><span class="toc-number">2.</span> <span class="toc-text">如何快速使用Midjourney生成AI图片</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Step1-%E4%B8%8B%E8%BD%BD%E6%B3%A8%E5%86%8C"><span class="toc-number">2.1.</span> <span class="toc-text">Step1: 下载注册</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step2-%E5%8A%A0%E5%85%A5Midjourney"><span class="toc-number">2.2.</span> <span class="toc-text">Step2: 加入Midjourney</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step4-%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90demo%E5%9B%BE%E7%89%87"><span class="toc-number">2.3.</span> <span class="toc-text">Step4: 如何快速生成demo图片</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Step5-%E5%A6%82%E4%BD%95%E8%BF%9B%E4%B8%80%E6%AD%A5%E5%8D%87%E7%BA%A7%E5%9B%BE%E7%89%87"><span class="toc-number">2.4.</span> <span class="toc-text">Step5: 如何进一步升级图片</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80-%E6%96%87%E5%AD%97%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.4.1.</span> <span class="toc-text">方式一:文字描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F%E4%BA%8C-%E5%9B%BE%E7%89%87%E5%8F%82%E8%80%83-%E6%96%87%E5%AD%97%E6%8F%8F%E8%BF%B0"><span class="toc-number">2.4.2.</span> <span class="toc-text">方式二:图片参考+文字描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%89-%E5%9B%BE%E7%89%87-%E5%9B%BE%E7%89%87"><span class="toc-number">2.4.3.</span> <span class="toc-text">方式三:图片+图片</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Midjourney%E5%9F%BA%E7%A1%80%E5%B1%9E%E6%80%A7"><span class="toc-number">3.</span> <span class="toc-text">Midjourney基础属性</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E7%94%BB%E9%9D%A2%E5%B0%BA%E5%AF%B8%E6%AF%94%E4%BE%8B"><span class="toc-number">3.1.</span> <span class="toc-text">1.画面尺寸比例:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A8%A1%E5%9E%8B%E9%80%89%E6%8B%A9"><span class="toc-number">3.2.</span> <span class="toc-text">2.模型选择:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%94%BB%E9%9D%A2%E8%B4%A8%E9%87%8F"><span class="toc-number">3.3.</span> <span class="toc-text">3.画面质量:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%A3%8E%E6%A0%BC%E5%8F%98%E5%8C%96%E7%A8%8B%E5%BA%A6"><span class="toc-number">3.4.</span> <span class="toc-text">4.风格变化程度:</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%94%BB%E9%9D%A2%E5%BE%AE%E8%B0%83"><span class="toc-number">3.5.</span> <span class="toc-text">5.画面微调:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-midjourney%E6%8C%87%E4%BB%A4%E6%95%99%E7%A8%8B"><span class="toc-number">3.5.1.</span> <span class="toc-text">1.midjourney指令教程</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E7%96%91%E9%97%AE%EF%BC%9A"><span class="toc-number">4.</span> <span class="toc-text">一些疑问：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Midjourney%E6%98%AF%E5%85%8D%E8%B4%B9%E7%9A%84%E5%90%97%EF%BC%9F"><span class="toc-number">4.1.</span> <span class="toc-text">Midjourney是免费的吗？</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="工作常用设计模式"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="工作常用设计模式"/></a><div class="content"><a class="title" href="/2024/06/13/Design_Pattern/%E5%B7%A5%E4%BD%9C%E5%B8%B8%E7%94%A8%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="工作常用设计模式">工作常用设计模式</a><time datetime="2024-06-13T08:35:57.943Z" title="发表于 2024-06-13 16:35:57">2024-06-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式笔记"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式笔记"/></a><div class="content"><a class="title" href="/2024/06/12/Design_Pattern/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式笔记">设计模式笔记</a><time datetime="2024-06-12T14:09:58.000Z" title="发表于 2024-06-12 22:09:58">2024-06-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/" title="shell-实用脚本1"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Linux/Linux.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="shell-实用脚本1"/></a><div class="content"><a class="title" href="/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%B8%80%EF%BC%89/" title="shell-实用脚本1">shell-实用脚本1</a><time datetime="2024-03-03T03:51:56.000Z" title="发表于 2024-03-03 11:51:56">2024-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/03/LinuxFile/Shell/" title="Shell-基本操作"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Linux/Linux.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Shell-基本操作"/></a><div class="content"><a class="title" href="/2024/03/03/LinuxFile/Shell/" title="Shell-基本操作">Shell-基本操作</a><time datetime="2024-03-03T03:51:56.000Z" title="发表于 2024-03-03 11:51:56">2024-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89/" title="shell-实用脚本2"><img src="https://cdn.jsdelivr.net/gh/923584731/picgoPicture/img/Linux/Linux.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="shell-实用脚本2"/></a><div class="content"><a class="title" href="/2024/03/03/LinuxFile/%E8%B6%85%E7%BA%A7%E5%AE%9E%E7%94%A8%E7%9A%84shell%E8%84%9A%E6%9C%AC100%E4%BE%8B%EF%BC%88%E4%BA%8C%EF%BC%89/" title="shell-实用脚本2">shell-实用脚本2</a><time datetime="2024-03-03T03:51:56.000Z" title="发表于 2024-03-03 11:51:56">2024-03-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By Alix</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '',
+      appKey: '',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script><script>function loadDisqus () {
+  var disqus_config = function () {
+    this.page.url = 'http://example.com/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/'
+    this.page.identifier = '/2023/12/28/AI/Midjourney%E5%85%A5%E9%97%A8%E6%89%8B%E5%86%8C/'
+    this.page.title = 'Midjourney 新手快速起步指南'
+  };
+
+  window.disqusReset = () => {
+    DISQUS.reset({
+      reload: true,
+      config: disqus_config
+    })
+  }
+
+  if (window.DISQUS) disqusReset()
+  else {
+    (function() { 
+      var d = document, s = d.createElement('script');
+      s.src = 'https://.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  }
+
+  document.getElementById('darkmode').addEventListener('click', () => {
+    setTimeout(() => window.disqusReset(), 200)
+  })
+}
+
+if ('Valine' === 'Disqus' || !true) {
+  if (true) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+  else loadDisqus()
+} else {
+  function loadOtherComment () {
+    loadDisqus()
+  }
+}
+</script></div><canvas id="universe"></canvas><script defer src="/js/universe.js"></script><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-ribbon.min.js" size="150" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="你好,大帅哥,大美女" data-fontsize="15px" data-random="true" async="async"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":20,"vOffset":-20},"mobile":{"show":false},"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/"});</script></body></html>
